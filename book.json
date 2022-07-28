@@ -1,0 +1,11 @@
+{
+    "title": "CircuitNet",
+    "description": "An Open-Source Dataset for Benchmarking Machine Learning in VLSI CAD Applications",
+    "author": "Zhuomin Chai",
+    "output.name": "circuitnet-UG-en",
+	"pdf":{
+		"fontFamily":"arial",
+        "frontsize":10
+	},
+    "plugins": ["katex"] 
+}
