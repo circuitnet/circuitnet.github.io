@@ -12,9 +12,9 @@ CircuitNet is an open-source dataset dedicated to machine learning application i
 
 | └── congestion
 
-| | ├── ...
+<!-- | | ├── ... -->
 
-<!-- | | ├── congestion_early_global_routing
+| | ├── congestion_early_global_routing
 
 | | | ├── overflow_based
 
@@ -40,7 +40,7 @@ CircuitNet is an open-source dataset dedicated to machine learning application i
 
 | |     ├── congestion_GR_horizontal_util
 
-| |     └── congestion_GR_vertical_util -->
+| |     └── congestion_GR_vertical_util
 
 | ├── drc
 
@@ -128,7 +128,7 @@ CircuitNet is an open-source dataset dedicated to machine learning application i
 </pre> -->
 
 
-The features  are saved separately in CircuitNet to enable customized application, and they need to be preprocessed and combined in certain arrangement for training. We provide our implementation of script for preprocessing as reference. But we also encourage to implement different preprocessing methods and use different combinations of features as feature engineering can effect the results a lot.
+  We separate the features and store them in different directories to enable custom applications. Thus they need to be preprocessed and combined in certain arrangement for training.  Our scripts can preprocess and combine different features for training and testing.  But we also encourage to implement different preprocessing methods and use different combinations of features.
 
 <!-- To evaluate the dataset, we have implement 7 models on 3 tasks, i.e. congestion prediction, DRC violations prediction, IR drop prediction. The implemention code is also open-sourced, and we also provide script for generating traing set in these experiments so that you will be able to reproduce our results. On the other hand, you can use the script as guide for implementing your own method. -->
 

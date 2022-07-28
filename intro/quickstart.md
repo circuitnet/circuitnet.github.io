@@ -4,7 +4,7 @@
 
 [Google Drive](https://drive.google.com/drive/folders/1zB002-Aq7OcW0NgiQbkS-GBdmn6hrmZM?usp=sharing)
 
-[Baidu Netdisk](https://drive.google.com/drive/folders/1zB002-Aq7OcW0NgiQbkS-GBdmn6hrmZM?usp=sharing)
+[Baidu Netdisk](https://pan.baidu.com/s/1nCnstpG8OuOvTlStaP-3Zg?pwd=5t99)
 
 Decompress with
 

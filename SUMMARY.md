@@ -6,6 +6,6 @@
   * [Overview](intro/overview.md)
 * [Features](feature/properties.md)
   * [Routability](feature/routability features.md)
-  * [Ir drop](feature/ir drop features.md)
+  * [IR drop](feature/ir drop features.md)
 
 
