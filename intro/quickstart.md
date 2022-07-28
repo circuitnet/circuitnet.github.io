@@ -13,7 +13,7 @@ Decompress with
 `tar -xzvf Routability_features.tar.gz`
 
 or 
-`cat Routability_features.tar.gz. > Ir_drop_features.tar.gz `
+`cat Ir_drop_features.tar.gz. > Ir_drop_features.tar.gz `
 
 `tar -xzvf Ir_drop_features.tar.gz`
 
