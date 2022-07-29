@@ -17,7 +17,7 @@ Note that the features need to be preprocessed for training, including resizing 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg {width:200px;height:200px}
+.tg {width:100px;height:100px}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;

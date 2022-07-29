@@ -7,5 +7,6 @@
 * [Features](feature/properties.md)
   * [Routability](feature/routability features.md)
   * [IR drop](feature/ir drop features.md)
+* [License](license.md)
 
 
