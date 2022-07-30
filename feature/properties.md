@@ -13,7 +13,7 @@ Note that the features need to be preprocessed for training, including resizing 
 
 ## Naming Conventions
 
-10370 samples are generated from 6 original RTL designs with variations in synthesis and physical design as shwon in table below. 
+10242 samples are generated from 6 original RTL designs with variations in synthesis and physical design as shwon in table below. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
