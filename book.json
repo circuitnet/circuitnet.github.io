@@ -5,7 +5,17 @@
     "output.name": "circuitnet-UG-en",
 	"pdf":{
 		"fontFamily":"arial",
-        "frontsize":10
-	},
+        "frontsize":10,
+		"margin":{
+
+		"right":0,
+
+		"left":0,
+
+		"top":5,
+
+		"bottom":0
+		}
+		},
     "plugins": ["katex"] 
 }
