@@ -1,0 +1,6 @@
+git init
+git branch -M main
+git remote add origin git@github.com:circuitnet/circuitnet.github.io.git
+git add .
+git commit -m 'first commit'
+git push -uf origin main
