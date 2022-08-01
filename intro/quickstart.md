@@ -4,7 +4,7 @@
 
 [Google Drive](https://drive.google.com/drive/folders/1zB002-Aq7OcW0NgiQbkS-GBdmn6hrmZM?usp=sharing)
 
-[Baidu Netdisk](https://pan.baidu.com/s/1hZLH22b7LLHYg_ECbdHnJA?pwd=1yvz)
+[Baidu Netdisk](https://pan.baidu.com/s/1evSTtuvphyl1_aSedsEQLA?pwd=wihf)
 
 Decompress with scripts in the script dir
 

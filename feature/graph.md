@@ -1,4 +1,6 @@
-# Netlist & Instance Placement
+# Graph Features
+
+## Gate-level Netlist & Instance Placement
 
 To enable application for graph based methods, we further provide 54 gate-level netlists and 10242 instance placement information.
 

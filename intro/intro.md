@@ -74,7 +74,7 @@ CircuitNet is an open-source dataset dedicated to machine learning (ML) applicat
 
 | └── IR_drop
 
-├── **Netlist & Placement**  
+├── **graph_features**  
 
 | ├── instance_placement
 
