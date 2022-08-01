@@ -12,4 +12,8 @@ The placement information for each layout, i.e., the location of instances, is s
 
 e.g., InstanceN : [left, bottom, right, top]
 
+The dictionary can be loaded with
+
+'numpy.load(FILE_NAME, allow_pickle=True)'
+
 (3) Graph can be obtained with the connectivity information from netlist as edges, and the instance placement information as vertices.
