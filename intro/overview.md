@@ -35,7 +35,7 @@ The information on layout is converted into image-like feature maps based on til
 
   (3) IR drop: the IR drop value on each node from a vectorless power rail analysis.
 
-## Supported Predition Tasks
+## Supported Prediction Tasks
 
 ### Congestion Prediction
 Predict congestion at post-placement stages.

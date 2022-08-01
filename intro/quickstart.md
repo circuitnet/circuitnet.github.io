@@ -16,7 +16,7 @@ or
 
 This may take sometime, please be patient.
 
-(2)Run preprocessing script to generate training set for coressponding tasks. Specify your task with option: congestion/DRC/IR_drop.
+(2)Run preprocessing script to generate training set for corresponding tasks. Specify your task with option: congestion/DRC/IR_drop.
 
 `python generate_training_set.py --task [congestion/DRC/IR_drop] --data_path [path_to_decompressed_dataset] --save_path [path_to_save_output]`
 

@@ -86,7 +86,7 @@ Density distribution of cells, which is equivalent to the cell counts in each ti
 
   Overflow based congestion is computed as $$\frac{overflow}{total tracks}$$. Overflow is the extra demand over total tracks and reflects where congestion occurs.
 
-  Utilization based congestion is computed as $$\frac{reamin tracks}{total tracks}$$. Utilization reflects the distribution of routing resources.
+  Utilization based congestion is computed as $$\frac{remain tracks}{total tracks}$$. Utilization reflects the distribution of routing resources.
 
 - Stage: 
   Congestion is reported by Innovus in 2 different stage, eGR and GR. eGR is early global routing, aka trial routing. It is done after placement as a quick and early estimation for congestion. GR is global routing, and the congestion is more accurate than eGR in this stage.
