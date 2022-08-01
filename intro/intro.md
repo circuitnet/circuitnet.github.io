@@ -6,13 +6,11 @@ CircuitNet is an open-source dataset dedicated to machine learning (ML) applicat
 
 
 .               
-├── **Routability_features**  
+├── **routability_features**  
 
 | ├── cell_density
 
 | └── congestion
-
-<!-- | | ├── ... -->
 
 | | ├── congestion_early_global_routing
 
@@ -62,7 +60,7 @@ CircuitNet is an open-source dataset dedicated to machine learning (ML) applicat
 
 |   └── RUDY_pin_long
 
-├── **Irdrop_features**  
+├── **IR_drop_features**  
 
 | ├── power_i
 
@@ -84,7 +82,7 @@ CircuitNet is an open-source dataset dedicated to machine learning (ML) applicat
 
 ├── **doc**
 
-| └── UserGuide.pdf  
+| └── user_guide.pdf  
 
 └── **script**  
 
