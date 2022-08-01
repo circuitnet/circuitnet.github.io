@@ -2,7 +2,7 @@
 
 (1)Based on your target tasks, download Routability Features(for congestion and DRC) or IR Drop Features(for IR drop).
 
-[Google Drive](https://drive.google.com/drive/folders/1zB002-Aq7OcW0NgiQbkS-GBdmn6hrmZM?usp=sharing)
+[Google Drive](https://drive.google.com/drive/folders/1GjW-1LBx1563bg3pHQGvhcEyK2A9sYUB?usp=sharing)
 
 [Baidu Netdisk](https://pan.baidu.com/s/1evSTtuvphyl1_aSedsEQLA?pwd=wihf)
 
