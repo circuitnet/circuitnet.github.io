@@ -6,19 +6,17 @@
 
 [Baidu Netdisk](https://pan.baidu.com/s/1hZLH22b7LLHYg_ECbdHnJA?pwd=1yvz)
 
-Decompress with
+Decompress with scripts in the script dir
 
-`cat Routability_features.tar.gz. > Routability_features.tar.gz`
-
-`tar -xzvf Routability_features.tar.gz`
+`python decompress_routability.py`
 
 or 
-`cat Ir_drop_features.tar.gz. > Ir_drop_features.tar.gz `
 
-`tar -xzvf Ir_drop_features.tar.gz`
+`python decompress_IR_drop.py`
 
+This may take sometime, please be patient.
 
-(2)Run preprocessing script to generate training set for coressponding tasks. Specify your task with option: congestion/drc/irdrop.
+(2)Run preprocessing script to generate training set for coressponding tasks. Specify your task with option: congestion/DRC/IR_drop.
 
-`python generate_training_set.py $task --data_path [path_to_decompressed_dataset] --save_path [path_to_save_output]`
+`python generate_training_set.py --task [congestion/DRC/IR_drop] --data_path [path_to_decompressed_dataset] --save_path [path_to_save_output]`
 

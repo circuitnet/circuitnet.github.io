@@ -1,19 +1,16 @@
-# Overview
-## Basic Properties
+# Basic Properties
 All features are tile-based. Most information in layout is mapped into tiles with a size of 
 
 1.5$$\mu$$m$$\times$$1.5$$\mu$$m(One exception is the pin confiureation map).
-Moreover, layouts are around 450$$\mu$$m$$\times$$450$$\mu$$m, resulting in feature maps of around 300$$\times$$300 tiles. Their detailed calculations are described in the following sections.
-
-The features in dataset are saved seperately and has to be 
+Moreover, layouts are around 450$$\mu$$m$$\times$$450$$\mu$$m, resulting in feature maps of around 300$$\times$$300 tiles. **In summary, most of the feature maps are 2-dimension numpy array [w, h] unless otherwise indicated.** Their detailed calculations are described in the following sections.
 
 Note that the features need to be preprocessed for training, including resizing and normalization. We provide script of our customized preprocessing method used in our experiment, but there is more than one way to complete preprocessing.
 
 
 
-## Naming Conventions
+# Naming Conventions
 
-10242 samples are generated from 6 original RTL designs with variations in synthesis and physical design as shwon in table below. 
+10242 samples are generated for feature extraction from 6 original RTL designs with variations in synthesis and physical design as shwon in table below. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -69,9 +66,9 @@ Note that the features need to be preprocessed for training, including resizing 
 </tbody>
 </table>
 
-The naming convention for data is deined as: {Design name}-{#Macros}-c{Clock}-u{Utilizations}-m{Macro placement}-p{Power mesh setting}-f{filler insertion}
+**The naming convention for extracted feature maps is deined as: {Design name}-{#Macros}-c{Clock}-u{Utilizations}-m{Macro placement}-p{Power mesh setting}-f{filler insertion}**
 
-Here is an example of data name: RISCY-a-1-c2-u0.7-m1-p1-f0
+Here is an example: RISCY-a-1-c2-u0.7-m1-p1-f0
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}

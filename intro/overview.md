@@ -39,16 +39,19 @@ The information on layout is converted into image-like feature maps based on til
 
 ### Congestion Prediction
 Predict congestion at post-placement stages.
+
 Input features:
 - Macro region
 - RUDY
 - Pin RUDY
   
 Label:
+
 Congestion
 
 ### DRC Violations Prediction
 Predict DRC violations at post-global-routing stages.
+
 Input features:
 - Macro region
 - RUDY
@@ -58,6 +61,7 @@ Input features:
 <!-- - Pin Configuration (for J-Net) -->
 
 Label:
+
 DRC violations
 
 ### IR Drop Prediction

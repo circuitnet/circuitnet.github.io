@@ -105,13 +105,13 @@ Density distribution of cells, which is equivalent to the cell counts in each ti
 RUDY refers to Rectangular Uniform wire DensitY which works as a early routing demand estimation after placement.
 There are several derivatives:
 - RUDY &#9322;
-- long RUDY &#9323;
-- short RUDY &#9324;
-- pin RUDY &#9325;
-- long pin RUDY &#9326;
+- RUDY long &#9323;
+- RUDY short &#9324;
+- RUDY pin &#9325;
+- RUDY pin long &#9326;
 
 
-(1) For the $$k$$th net with bounding box  $$(x_{k,min}$$, $$x_{k,max}$$, $$y_{k,min}$$, $$y_{k,max})$$, its RUDY at tile $$(i,j)$$ with bounding box $$(x_{i,min}$$, $$x_{i,max}$$, $$y_{j,min}$$, $$_{j,max})$$  is defined as
+(1) For the $$k$$th net with bounding box  $$(x_{k,min}$$, $$x_{k,max}$$, $$y_{k,min}$$, $$y_{k,max})$$, its *RUDY* at tile $$(i,j)$$ with bounding box $$(x_{i,min}$$, $$x_{i,max}$$, $$y_{j,min}$$, $$_{j,max})$$  is defined as
 
 $$ w_k = x_{k,max}-x_{k,min}$$
 
@@ -126,13 +126,13 @@ $$ RUDY_k(i,j) =  \frac{w_k + h_k}{w_k \times h_k} \frac{s_ij}{s_k}$$
 
 where min()/max() return the smaller/larger value among 2 inputs, $$s_{ij}$$ is the area of tile $$(i,j)$$ and $$s_k$$ denotes the area of tile $$(i,j)$$ covered by net k.
 
-(2) long RUDY and short RUDY are the decomposition of RUDY, concerning the length of net k. If net k covers more than 1 tile, it contributes to long RUDY. Otherwise, net k covers only 1 tile, it contributes to short RUDY.
+(2) *RUDY long* and *RUDY short* are the decomposition of *RUDY*, concerning the length of net k. If net k covers more than 1 tile, it contributes to *RUDY long*. Otherwise, net k covers only 1 tile, then it contributes to *RUDY short*.
 
-(3) pin RUDY is calculated on the basis of each pin and the net connected the pin. For tile $$(i,j)$$, pin RUDY of a pin belonging to net k is calculated as
+(3) *RUDY pin* is calculated on the basis of each pin and the net connected the pin, and it is in analog for pin density. For tile $$(i,j)$$, *RUDY pin* of a pin belonging to net k is calculated as
 
-$$ pin RUDY(i,j) =  \frac{w_k + h_k}{w_k \times h_k}$$
+$$ RUDY pin(i,j) =  \frac{w_k + h_k}{w_k \times h_k}$$
 
-long pin RUDY is defined in symmetry with long RUDY as the decomposition of pin RUDY, i.e. if net k covers more than 1 tile, its pins contributes to long pin RUDY. 
+*RUDY pin long* is defined in symmetry with *RUDY long* as the decomposition of *RUDY pin* , i.e., if net k covers more than 1 tile, its pins contributes to *RUDY pin long*. 
 
 ## DRC &#9327;
 Design rule check violations counted in each tile. Different types of DRC are both saved together in one map and seperately saved.

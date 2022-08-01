@@ -42,11 +42,11 @@ CircuitNet is an open-source dataset dedicated to machine learning (ML) applicat
 
 | |     └── congestion_GR_vertical_util
 
-| ├── drc
+| ├── DRC
 
-| | ├── drc_all
+| | ├── DRC_all
 
-| | └── drc_seperated
+| | └── DRC_seperated
 
 | ├── macro_region
 
@@ -54,33 +54,37 @@ CircuitNet is an open-source dataset dedicated to machine learning (ML) applicat
 
 |   ├── RUDY
 
-|   ├── long_RUDY
+|   ├── RUDY_long
 
-|   ├── short_RUDY
+|   ├── RUDY_short
 
-|   ├── pin_RUDY
+|   ├── RUDY_pin
 
-|   └── long_pin_RUDY
+|   └── RUDY_pin_long
 
 ├── **Irdrop_features**  
 
-| ├── Power_i
+| ├── power_i
 
-| ├── Power_s
+| ├── power_s
 
-| ├── Power_sca
+| ├── power_sca
 
-| ├── Power_all
+| ├── power_all
 
-| ├── Power_t
+| ├── power_t
 
-| └── ir_drop
+| └── IR_drop
 
-├── doc
+├── **doc**
 
 | └── UserGuide.pdf  
 
-└── script  
+└── **script**  
+
+| ├── decompress_routability.py
+
+| ├── decompress_IR_drop.py
 
   └── generate_training_set.py
 
