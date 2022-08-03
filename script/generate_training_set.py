@@ -89,8 +89,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description=description)
                                                              
     parser.add_argument("--task", default = None, type=str, help = 'select from congestion, DRC and IR_drop' )
-    parser.add_argument("--data_path", default = './', type=str, help = 'path to the decompressed dataset')
-    parser.add_argument("--save_path",  default = './training_set', type=str, help = 'path to save training set')
+    parser.add_argument("--data_path", default = '../', type=str, help = 'path to the decompressed dataset')
+    parser.add_argument("--save_path",  default = '../training_set', type=str, help = 'path to save training set')
 
     args = parser.parse_args()                                       
     return args

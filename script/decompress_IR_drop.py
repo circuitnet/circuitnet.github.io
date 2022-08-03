@@ -2,7 +2,7 @@ import os
 
 decompress_path = '../IR_drop_features_decompressed'
 os.system('mkdir -p %s ' % (decompress_path))
-os.system('cat ./Ir_drop_features/power_t.tar.gz.* > ./Ir_drop_features/power_t.tar.gz')
+os.system('cat ../Ir_drop_features/power_t.tar.gz.* > ../Ir_drop_features/power_t.tar.gz')
 
 filelist = os.walk('../IR_drop_features')
 for parent,dirnames,filenames in filelist:
