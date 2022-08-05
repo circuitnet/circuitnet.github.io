@@ -13,11 +13,13 @@ This project is under active development. We are expanding the dataset to includ
 
 ### Citation
 
+[Paper Link](https://arxiv.org/abs/2208.01040v2)
+
 ```
 @article{chai2022circuitnet,
   title = {CircuitNet: An Open-Source Dataset for Machine Learning Applications in Electronic Design Automation (EDA)},
   author = {Chai, Zhuomin and Zhao, Yuxiang and Lin, Yibo and Liu, Wei and Wang, Runsheng and Huang, Ru},
-  journal={arXiv preprint arXiv:2208.00287},
+  journal={arXiv preprint arXiv:2208.01040},
   year = {2022}
 }
 
