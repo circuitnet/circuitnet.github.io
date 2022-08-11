@@ -113,15 +113,15 @@ There are several derivatives:
 
 (1) For the $$k$$th net with bounding box  $$(x_{k,min}$$, $$x_{k,max}$$, $$y_{k,min}$$, $$y_{k,max})$$, its *RUDY* at tile $$(i,j)$$ with bounding box $$(x_{i,min}$$, $$x_{i,max}$$, $$y_{j,min}$$, $$_{j,max})$$  is defined as
 
-$$ w_k = x_{k,max}-x_{k,min}$$
+<center>$$ w_k = x_{k,max}-x_{k,min}$$</center>
 
-$$ h_k = y_{k,max}-y_{k,min}$$
+<center>$$ h_k = y_{k,max}-y_{k,min}$$</center>
 
-$$ s_k = (min(x_{k,max}, x_{i,max})-max(x_{k,min}, x_{i,min})) \times (min(y_{k,max}, y_{j,max})-max(y_{k,min}, y_{j,min}))$$
+<center>$$ s_k = (min(x_{k,max}, x_{i,max})-max(x_{k,min}, x_{i,min})) \times (min(y_{k,max}, y_{j,max})-max(y_{k,min}, y_{j,min}))$$</center>
 
-$$ s_{ij} = (x_{i,max}-x_{i,min})\times (y_{j,max}-y_{j,min})$$
+<center>$$ s_{ij} = (x_{i,max}-x_{i,min})\times (y_{j,max}-y_{j,min})$$</center>
 
-$$ RUDY_k(i,j) =  \frac{w_k + h_k}{w_k \times h_k} \frac{s_ij}{s_k}$$
+<center>$$ RUDY_k(i,j) =  \frac{w_k + h_k}{w_k \times h_k} \frac{s_ij}{s_k}$$</center>
 
 
 where min()/max() return the smaller/larger value among 2 inputs, $$s_{ij}$$ is the area of tile $$(i,j)$$ and $$s_k$$ denotes the area of tile $$(i,j)$$ covered by net k.
@@ -130,7 +130,7 @@ where min()/max() return the smaller/larger value among 2 inputs, $$s_{ij}$$ is 
 
 (3) *RUDY pin* is calculated on the basis of each pin and the net connected the pin, and it is in analog for pin density. For tile $$(i,j)$$, *RUDY pin* of a pin belonging to net k is calculated as
 
-$$ RUDY pin(i,j) =  \frac{w_k + h_k}{w_k \times h_k}$$
+<center>$$ RUDY pin(i,j) =  \frac{w_k + h_k}{w_k \times h_k}$$</center>
 
 *RUDY pin long* is defined in symmetry with *RUDY long* as the decomposition of *RUDY pin* , i.e., if net k covers more than 1 tile, its pins contributes to *RUDY pin long*. 
 

@@ -12,17 +12,17 @@ Including 5 component：1. internal power: $$power_i$$, 2. switching power: $$po
 
 Then these instance level power is merged into corresponding tile to form power maps.
 
-$$ power_i \propto p_i$$
+<center>$$ power_i \propto p_i$$</center>
 
-$$ power_s \propto p_s$$
+<center>$$ power_s \propto p_s$$</center>
 
-$$ power_{sca} \propto (p_i+p_s) \times r_{tog}+p_l$$
+<center>$$ power_{sca} \propto (p_i+p_s) \times r_{tog}+p_l$$</center>
 
-$$ power_{all} \propto p_i+p_s+p_l$$
+<center>$$ power_{all} \propto p_i+p_s+p_l$$</center>
 
 (2) Timing window report contains possible switching time domain of the instance in a clock period from a static timing analysis for each pin. The clock period is decomposed evenly into 20 parts, and the cell contributes to power map $$power_t$$ only in the parts that it is switching. 
 
-$$ power_t[0,19] \propto p_{sca}$$
+<center>$$ power_t[0,19] \propto p_{sca}$$</center>
 
 <div align="center">
   <img src="../pics/power.png" alt= "power_sca">
