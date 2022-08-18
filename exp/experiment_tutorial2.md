@@ -42,7 +42,6 @@ Nine features extracted at different stages of physical design flow are combined
   <img src="../pics/6.png" >
 </div> -->
 
-![](C:\Users\Endeavour\AppData\Roaming\marktext\images\2022-08-18-11-04-06-image.png)
 
 After finishing the training phase, the prediction map can be specially demonstrated into a binary matrix, where the area greater than zero depicts the potential DRC violation in designing space.
 
@@ -52,7 +51,6 @@ After finishing the training phase, the prediction map can be specially demonstr
   <img src="../pics/7.png" width="300">
 </div>
 
-![](C:\Users\Endeavour\AppData\Roaming\marktext\images\2022-08-18-11-05-32-image.png)
 
 ROC and PRC are also provided to measure the performance of the abovementioned method.
 
