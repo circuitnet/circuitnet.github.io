@@ -9,7 +9,7 @@ Here, we select several representative methods to give a brief introduction to a
 The network of `Global Placement with Deep Learning-Enabled Explicit Routability Optimization` uses an encoder and decoder architecture to translate the image-like features into a routing resource assumption heat map (congestion map). The architecture is shown below.
 
 <div align="center">
-  <img src="../pics/1.png"  width="450">
+  <img src="../pics/1.png"  width="600">
 </div>
 
 Three image-like features of RUDY, PinRUDY and MacroRegion were fed into the network to get the final congestion prediction. Here is the visualization of input features.
@@ -29,7 +29,7 @@ We train the network in an end-to-end manner and compute the loss between the ou
 DRC Violation prediction is an essential step in the physical design procedure aiming at detecting violation hotspots at the early design stage, which is quite conducive to reducing the chip design turn-around. `RouteNet: Routability Prediction for Mixed-Size Designs Using Convolutional Neural Network` is a typical method for accurately detecting violation hotspots.
 
 <div align="center">
-  <img src="../pics/4.png"  width="400">
+  <img src="../pics/4.png"  width="600">
 </div>
 
 Nine features extracted at different stages of physical design flow are combined together as one input tensor.
@@ -64,7 +64,7 @@ IR Drop is another critical part of the whole design workflow that hugely affect
 
 
 <div align="center">
-  <img src="../pics/10.png"  width="450">
+  <img src="../pics/10.png"  width="600">
 </div>
 
 Here is the visualization of input features.
