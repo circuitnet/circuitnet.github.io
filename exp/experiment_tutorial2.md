@@ -55,7 +55,7 @@ After finishing the training phase, the prediction map can be specially demonstr
 ROC and PRC are also provided to measure the performance of the abovementioned method.
 
 <div align="center">
-  <img src="../pics/8.png" title="" alt="" width="281"> <img src="../pics/9.png" title="" alt="" width="291">
+  <img src="../pics/8.png" width="281"> <img src="../pics/9.png"  width="291">
 </div>
 
 ### IR Drop
