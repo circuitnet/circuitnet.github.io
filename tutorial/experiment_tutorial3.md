@@ -138,11 +138,17 @@ class GPDL(nn.Module):
 
 
 
-Training loss and evaluation metrics are presented below.![](C:\Users\Endeavour\AppData\Roaming\marktext\images\2022-08-20-10-31-46-image.png)
+Training loss and evaluation metrics are presented below.
+
+<div align="center">
+  <img src="../pics/loss.png"  width="340">
+</div>
 
 
 
-![](C:\Users\Endeavour\AppData\Roaming\marktext\images\2022-08-20-10-32-29-image.png)
+<div align="center">
+  <img src="../pics/val.png"  width="580">
+</div>
 
 
 
