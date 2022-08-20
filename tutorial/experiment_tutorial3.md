@@ -102,6 +102,54 @@ Three image-like features of RUDY, PinRUDY and MacroRegion were fed into the net
   <img src="../pics/2.png"  width="300">
 </div>
 
+We create a class called `CongestionDataset` to intake congestion feature and label list,   
+
+while reading and processing them in each batch through pytorch `DataLoader`.
+
+```python
+class CongestionDataset(object):
+    def __init__(self, ann_file, dataroot, pipeline=None, test_mode=False, **kwargs):
+        super().__init__()
+        self.ann_file = ann_file
+        self.dataroot = dataroot
+        self.test_mode = test_mode
+        if pipeline:
+            self.pipeline = Compose(pipeline)
+        else:
+            self.pipeline = None
+
+        self.data_infos = self.load_annotations()
+
+    def load_annotations(self):
+        data_infos = []
+        with open(self.ann_file, 'r') as fin:
+            for line in fin:
+                feature, label = line.strip().split(',')
+                if self.dataroot is not None:
+                    feature_path = osp.join(self.dataroot, feature)
+                    label_path = osp.join(self.dataroot, label)
+                data_infos.append(dict(feature_path=feature_path, label_path=label_path))
+        return data_infos
+
+    def prepare_data(self, idx):
+        results = copy.deepcopy(self.data_infos[idx])
+        results['feature'] = np.load(results['feature_path'])
+        results['label'] = np.load(results['label_path'])
+
+        results = self.pipeline(results) if self.pipeline else results
+        
+        feature =  results['feature'].transpose(2, 0, 1).astype(np.float32)
+        label = np.expand_dims(results['label'], axis=0).astype(np.float32)
+
+        return feature, label, results['label']
+
+    def __len__(self):
+        return len(self.data_infos)
+
+    def __getitem__(self, idx):
+        return self.prepare_data(idx)
+```
+
 
 
 We train this network in an end-to-end manner and compute the loss between the output and the golden result obtained by Innovus global router. 
@@ -141,13 +189,13 @@ class GPDL(nn.Module):
 Training loss and evaluation metrics are presented below.
 
 <div align="center">
-  <img src="../pics/loss.png"  width="340">
+  <img src="../pics/loss.png"  width="330">
 </div>
 
 
 
 <div align="center">
-  <img src="../pics/val.png"  width="580">
+  <img src="../pics/val.png"  width="600">
 </div>
 
 
