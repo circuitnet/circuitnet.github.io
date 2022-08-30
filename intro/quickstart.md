@@ -14,7 +14,7 @@ or
 
 `python decompress_IR_drop.py`
 
-This may take sometime, please be patient.
+This may takes at least 15 minutes and 200G storage space, please be patient.
 
 (2)Run preprocessing script to generate training set for corresponding tasks. Specify your task with option: congestion/DRC/IR_drop.
 
