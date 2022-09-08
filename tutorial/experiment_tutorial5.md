@@ -193,7 +193,9 @@ class GPDL(nn.Module):
 
 
 
-The model is trained for 200k iterations. The curve of training loss and evaluation metrics in training are presented in Fig 3 and Fig 4. Peak signal-to-noise ratio (PSNR) and structure similarity index measure (SSIM) are used to evaluate pixel level accuracy, and the final result of these metrics are 31.0 and 0.873 respectively.
+The model is trained for 200k iterations. The curve of loss versus training iterations are presented in Fig 3. 
+<!-- The model is trained for 200k iterations. The curve of training loss and evaluation metrics in training are presented in Fig 3 and Fig 4.  -->
+Normalized Root-Mean-Square-Error (NRMSE) and structure similarity index measure (SSIM) are used to evaluate pixel level accuracy, and the final result of these metrics are 0.04 and 0.80 respectively.
 
 <div align="center">
   <img src="../pics/tutorial/congestion_loss.png"  width="330">
@@ -203,32 +205,32 @@ The model is trained for 200k iterations. The curve of training loss and evaluat
 
 
 
-<div align="center">
+<!-- <div align="center">
   <img src="../pics/tutorial/congestion_val.png"  width="600">
     <br>
   <b>Fig 4</b> Evaluation metrics(PSNR, SSIM) at different training iterations.
-</div>
+</div> -->
 
 
 
-After finishing the training procedure, we dump the visualization of the predicted congestion map, which is shown in Fig 5. The parts with high-contrast indicate the congestion hotspot.
+After finishing the training procedure, we dump the visualization of the predicted congestion map, which is shown in Fig 4. The parts with high-contrast indicate the congestion hotspot.
 
 <div align="center">
   <img src="../pics/tutorial/congestion_output.png"  width="300">
   <br>
-  <b>Fig 5</b> Visualization of the predicted congestion map.
+  <b>Fig 4</b> Visualization of the predicted congestion map.
 </div>
 
 
 
 ### DRC Violation Prediction <div id="DRC"></div>
 
-Design rule check (DRC) violation is another estimation for routability. The congestion is available after global routing, while DRC violation is reported after detailed routing. And there is a deviation between them at advanced tech node, such as 7 nm. Thus it is also necessary to predict DRC violations directly. `RouteNet: Routability Prediction for Mixed-Size Designs Using Convolutional Neural Network` [2] is a typical method for accurately predicting violation hotspots. The architecture is shown in Fig 6.
+Design rule check (DRC) violation is another estimation for routability. The congestion is available after global routing, while DRC violation is reported after detailed routing. And there is a deviation between them at advanced tech node, such as 7 nm. Thus it is also necessary to predict DRC violations directly. `RouteNet: Routability Prediction for Mixed-Size Designs Using Convolutional Neural Network` [2] is a typical method for accurately predicting violation hotspots. The architecture is shown in Fig 5.
 
 <div align="center">
   <img src="../pics/tutorial/DRC_model.png"  width="600">
   <br>
-  <b>Fig 6</b> Model architecture.
+  <b>Fig 5</b> Model architecture.
 </div>
 
 The network is the same as the one in congestion prediction . 
@@ -313,12 +315,12 @@ class Decoder(nn.Module):
         return output  return self.main(input)
 ```
 
-In this work, nine features are selected as input features to feed into the model. The included features are (1)macro_region, (2)cell_density, (3)RUDY_long, (4)RUDY_short, (5)RUDY_pin_long, (6)congestion_eGR_horizontal_overflow, (7)congestion_eGR_vertical_overflow, (8)congestion_GR_horizontal_overflow, (9)congestion_GR_vertical_overflow. Again, these features are preprocessed and combined together as one numpy array. The visualization of the array is shown in Fig 7.
+In this work, nine features are selected as input features to feed into the model. The included features are (1)macro_region, (2)cell_density, (3)RUDY_long, (4)RUDY_short, (5)RUDY_pin_long, (6)congestion_eGR_horizontal_overflow, (7)congestion_eGR_vertical_overflow, (8)congestion_GR_horizontal_overflow, (9)congestion_GR_vertical_overflow. Again, these features are preprocessed and combined together as one numpy array. The visualization of the array is shown in Fig 6.
 
 <div align="center">
   <img src="../pics/tutorial/DRC_input.png"  width="300">
     <br>
-  <b>Fig 7</b> Visualization of the input numpy array.
+  <b>Fig 6</b> Visualization of the input numpy array.
 </div>
 
 We create a class called `DRCDataset` to intake the numpy array of congestion feature and label, while reading and processing them through pytorch `DataLoader`.
@@ -394,28 +396,28 @@ class RouteNet(nn.Module):
             raise TypeError("'pretrained' must be a str or None. "
                             f'But received {type(pretrained)}.')
 ```
-The model is trained for 200k iterations. The curve of training loss is presented in Fig 8.
+The model is trained for 200k iterations. The curve of training loss is presented in Fig 7.
 
 <div align="center">
   <img src="../pics/tutorial/DRC_loss.png" width="330">
     <br>
-  <b>Fig 8</b> Training loss at different training iterations.
+  <b>Fig 7</b> Training loss at different training iterations.
 </div>
 
 
-The DRC violations map provides the number of DRC violations in each tile, i.e., in each Gcell in the layout. The visualization of the DRC violations map is shown in Fig 9.
+The DRC violations map provides the number of DRC violations in each tile, i.e., in each Gcell in the layout. The visualization of the DRC violations map is shown in Fig 8.
 
 <div align="center">
   <img src="../pics/tutorial/DRC_output.png" width="300">
     <br>
-  <b>Fig 9</b> Visualization of the DRC violations map.
+  <b>Fig 8</b> Visualization of the DRC violations map.
 </div>
-In this work, the tiles have number of violations exceeding the threshold are regarded as hotspots. The hotspot is much less than non-hotspot, which is imbalanced, thus the evaluation metrics receiver operating characteristic (ROC) curve and precision-recall(PR) curve, are adopted to evaluate the performance of the method. The result is shown in Fig 10. 
+In this work, the tiles have number of violations exceeding the threshold are regarded as hotspots. The hotspot is much less than non-hotspot, which is imbalanced, thus the evaluation metrics receiver operating characteristic (ROC) curve and precision-recall(PR) curve, are adopted to evaluate the performance of the method. The result is shown in Fig 9. 
 
 <div align="center">
   <img src="../pics/tutorial/DRC_ROC.png" width="291"> <img src="../pics/tutorial/DRC_PR.png"  width="281">
     <br>
-  <b>Fig 10</b> ROC curve and PR curve.
+  <b>Fig 9</b> ROC curve and PR curve.
 </div>
 
 ### IR Drop Prediction <div id="IR"></div>
@@ -427,10 +429,10 @@ functionality. `MAVIREC: ML-Aided Vectored IR-Drop Estimation and Classification
 <div align="center">
   <img src="../pics/tutorial/IR_model.png"  width="600">
     <br>
-  <b>Fig 11</b> Model architecture.
+  <b>Fig 10</b> Model architecture.
 </div>
 
-The generation network consists of two fundamental modules, encoder and decoder, which are designed according to the architecture illustrated in Fig 11.
+The generation network consists of two fundamental modules, encoder and decoder, which are designed according to the architecture illustrated in Fig 10.
 
 ```python
 class DoubleConv3d(nn.Module):
@@ -524,14 +526,14 @@ class OutConv(nn.Module):
 ```
 
 
-In this work, five features are selected as input features to feed into the model. The included features are (1)power_i, (2)power_s, (3)power_sca, (4)power_all, (5)power_t. Again, these features are preprocessed and combined together as one numpy array. The visualization of the array is shown in Fig 12.
+In this work, five features are selected as input features to feed into the model. The included features are (1)power_i, (2)power_s, (3)power_sca, (4)power_all, (5)power_t. Again, these features are preprocessed and combined together as one numpy array. The visualization of the array is shown in Fig 11.
 
 
 
 <div align="center">
   <img src="../pics/tutorial/IR_input.png" width="300">
     <br>
-  <b>Fig 12</b> Visualization of input numpy array.
+  <b>Fig 11</b> Visualization of input numpy array.
 </div>
 
 We create a class called `IRDropDataset` to intake the numpy array of congestion feature and label, while reading and processing them through pytorch `DataLoader`.
@@ -653,29 +655,29 @@ class MAVI(nn.Module):
 
 ```
 
-The IR drop map provides the maximum IR drop value in each tile, i.e., in each Gcell in the layout. The visualization of the IR drop map is shown in Fig 13.
+The IR drop map provides the maximum IR drop value in each tile, i.e., in each Gcell in the layout. The visualization of the IR drop map is shown in Fig 12.
 
 <div align="center">
   <img src="../pics/tutorial/IR_output.png" width="300">
     <br>
-  <b>Fig 13</b> Visualization of the IR drop map.
+  <b>Fig 12</b> Visualization of the IR drop map.
 </div>
 
-The model is trained for 200k iterations. The curve of training loss is presented in Fig 14.
+The model is trained for 200k iterations. The curve of training loss is presented in Fig 13.
 
 <div align="center">
   <img src="../pics/tutorial/IR_loss.png" width="330">
     <br>
-  <b>Fig 14</b> Training loss at different training iterations.
+  <b>Fig 13</b> Training loss at different training iterations.
 </div>
 
-In this work, the tiles have IR drop value exceeding the threshold are regarded as hotspots. Thus, the same evaluation metrics as the DRC violation prediction task, which are ROC curve and PR curve, are adopted to evaluate the performance of the method. The result is shown in Fig 15. 
+In this work, the tiles have IR drop value exceeding the threshold are regarded as hotspots. Thus, the same evaluation metrics as the DRC violation prediction task, which are ROC curve and PR curve, are adopted to evaluate the performance of the method. The result is shown in Fig 14. 
 
 
 <div align="center">
   <img src="../pics/tutorial/IR_ROC.png" width="278" > <img src="../pics/tutorial/IR_PR.png" width="278">
     <br>
-  <b>Fig 15</b> ROC curve and PR curve.
+  <b>Fig 14</b> ROC curve and PR curve.
 </div>
 
 # Citation
