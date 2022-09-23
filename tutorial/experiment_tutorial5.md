@@ -2,7 +2,7 @@
 
 ------
 
-Herein, we select several representative methods to give a brief introduction of applying machine learning to VLSI physical design cycle that provides an intuitive awareness of the functionality and practicability of `CircuirNet` to users. Please refer to [our github repository](https://github.com/circuitnet/CircuitNet) for the entire example. 
+Herein, we select several representative methods to give a brief introduction of applying machine learning to VLSI physical design cycle that provides an intuitive awareness of the functionality and practicability of `CircuirNet` to users. Please refer to our github repository [https://github.com/circuitnet/CircuitNet](https://github.com/circuitnet/CircuitNet) for the entire example. 
 
 Note that all three selected methods utilize image-like features to train a generative model, such as fully convolutional networks (FCNs) and U-Net, formulating the prediction task into an image-to-image translation task. We did our best to reproduce the experimental environment in the original paper, including model architecture, feature selection and loss. The name of the features are matched with the ones in CircuitNet to avoid confusion.
 
@@ -146,7 +146,7 @@ class CongestionDataset(object):
         results = self.pipeline(results) if self.pipeline else results
         
         feature =  results['feature'].transpose(2, 0, 1).astype(np.float32)
-        label = np.expand_dims(results['label'], axis=0).astype(np.float32)
+        label = results['label'].transpose(2, 0, 1).astype(np.float32)
 
         return feature, label, results['label']
 
@@ -568,16 +568,9 @@ class IRDropDataset(object):
     def prepare_data(self, idx):
         results = copy.deepcopy(self.data_infos[idx])
 
-        spatial_feature = []
-        for k, v in results['feature_path'].items():
-            if k != self.temporal_key:
-                spatial_feature.append(np.load(v))
-            else:
-                temporal_feature = np.load(v)
-        feature = [np.array(spatial_feature), temporal_feature]
-        feature = np.ascontiguousarray(np.concatenate(feature, axis=0).astype(np.float32))
+        feature = np.load(results['feature_path']).transpose(2, 0, 1).astype(np.float32)
         feature = np.expand_dims(feature, axis=0)
-        label = np.load(results['label_path']).astype(np.float32)
+        label = np.load(results['label_path']).transpose(2, 0, 1).astype(np.float32).squeeze()
         return feature, label, results['label_path']
 
 

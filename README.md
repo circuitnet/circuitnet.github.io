@@ -9,7 +9,11 @@ This documentation is organized as followed:
 - [Introduction](https://circuitnet.github.io/intro/intro.html): introduction and quick start.
 - [Feature Description](https://circuitnet.github.io/feature/properties.html): name conventions, calculation method, characteristics and visualization.
 
+The codes in the [tutorial page](https://circuitnet.github.io/tutorial/experiment_tutorial5.html) is available in our github repository [https://github.com/circuitnet/CircuitNet](https://github.com/circuitnet/CircuitNet).
+
 This project is under active development. We are expanding the dataset to include diverse and large-scale designs for versatile ML applications in EDA. If you have any feedback or questions, please feel free to contact us.
+
+
 
 ### Citation
 
@@ -20,6 +24,9 @@ This project is under active development. We are expanding the dataset to includ
   title = {CircuitNet: An Open-Source Dataset for Machine Learning Applications in Electronic Design Automation (EDA)},
   author = {Chai, Zhuomin and Zhao, Yuxiang and Lin, Yibo and Liu, Wei and Wang, Runsheng and Huang, Ru},
   journal= {SCIENCE CHINA Information Sciences},
+  volume={65},
+  number = "12",
+  pages={227401-},
   year = {2022}
 }
 
