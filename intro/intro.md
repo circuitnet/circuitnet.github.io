@@ -41,13 +41,16 @@ CircuitNet is an open-source dataset dedicated to machine learning (ML) applicat
 | ├── power_t
 | └── IR_drop
 ├── graph_features
-| ├── instance_placement
-| └── netlist
+| ├── flatten_netlist
+| ├── hierarchical_netlist
+| ├── graph_information
+| └── instance_placement
+├── LEF&DEF
 ├── doc
 | └── user_guide.pdf  
 └── script
-| ├── decompress_routability.py
-| ├── decompress_IR_drop.py
+  ├── decompress_routability.py
+  ├── decompress_IR_drop.py
   └── generate_training_set.py
 ```
 

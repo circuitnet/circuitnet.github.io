@@ -412,12 +412,12 @@ The DRC violations map provides the number of DRC violations in each tile, i.e.,
     <br>
   <b>Fig 8</b> Visualization of the DRC violations map.
 </div>
-In this work, the tiles have number of violations exceeding the threshold are regarded as hotspots. The hotspot is much less than non-hotspot, which is imbalanced, thus the evaluation metrics receiver operating characteristic (ROC) curve and precision-recall(PR) curve, are adopted to evaluate the performance of the method. The result is shown in Fig 9. 
+In this work, the tiles have number of violations exceeding the threshold are regarded as hotspots. The hotspots are much less than non-hotspot, which is imbalanced, thus the evaluation metric, receiver operating characteristic (ROC) curve, is adopted to evaluate the performance of the method. The result is shown in Fig 9. 
 
 <div align="center">
-  <img src="../pics/tutorial/DRC_ROC.png" width="291"> <img src="../pics/tutorial/DRC_PR.png"  width="281">
+  <img src="../pics/tutorial/drc_roc_routenet.png" width="291">=
     <br>
-  <b>Fig 9</b> ROC curve and PR curve.
+  <b>Fig 9</b> ROC curve.
 </div>
 
 ### IR Drop Prediction <div id="IR"></div>
@@ -664,13 +664,13 @@ The model is trained for 200k iterations. The curve of training loss is presente
   <b>Fig 13</b> Training loss at different training iterations.
 </div>
 
-In this work, the tiles have IR drop value exceeding the threshold are regarded as hotspots. Thus, the same evaluation metrics as the DRC violation prediction task, which are ROC curve and PR curve, are adopted to evaluate the performance of the method. The result is shown in Fig 14. 
+In this work, the tiles have IR drop value exceeding the threshold are regarded as hotspots. Thus, the same evaluation metric as the DRC violation prediction task, which is the ROC curve, is adopted to evaluate the performance of the method. The result is shown in Fig 14. 
 
 
 <div align="center">
-  <img src="../pics/tutorial/IR_ROC.png" width="278" > <img src="../pics/tutorial/IR_PR.png" width="278">
+  <img src="../pics/tutorial/irdrop_roc_mavi.png" width="278" >
     <br>
-  <b>Fig 14</b> ROC curve and PR curve.
+  <b>Fig 14</b> ROC curve.
 </div>
 
 # Citation
