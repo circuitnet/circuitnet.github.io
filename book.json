@@ -3,6 +3,9 @@
     "description": "An Open-Source Dataset for Benchmarking Machine Learning in VLSI CAD Applications",
     "author": "Zhuomin Chai",
     "output.name": "circuitnet-UG-en",
+	"theme-default": {
+		"showLevel": true
+	},
 	"pdf":{
 		"fontFamily":"arial",
         "frontsize":10,

@@ -32,7 +32,7 @@ This project is under active development. We are expanding the dataset to includ
 
 ```
 
-### ChangeLog
+### Change Log
 - 2022/8/1 
   
   First release.
@@ -48,5 +48,6 @@ This project is under active development. We are expanding the dataset to includ
 
 - 2022/3/22 
 
-1. LEF/DEF is updated to included tech information (sanitized).
-2. Congestion features and graph features generated from ISPD2015 benchmark is available in the ISPD2015 dir in [Google Drive](https://drive.google.com/drive/u/1/folders/1GjW-1LBx1563bg3pHQGvhcEyK2A9sYUB) and [Baidu Netdisk](https://pan.baidu.com/disk/main#/index?category=all&path=%2Fapps%2Fbypy%2FCircuitNet).
+  LEF/DEF is updated to include tech information (sanitized).
+
+  Congestion features and graph features generated from ISPD2015 benchmark are available in the ISPD2015 dir in [Google Drive](https://drive.google.com/drive/u/1/folders/1GjW-1LBx1563bg3pHQGvhcEyK2A9sYUB) and [Baidu Netdisk](https://pan.baidu.com/disk/main#/index?category=all&path=%2Fapps%2Fbypy%2FCircuitNet).
