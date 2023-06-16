@@ -42,7 +42,10 @@ The placement information for each layout, i.e., the location of instances, is e
 
 e.g., InstanceN : [left, bottom, right, top]
 
-The coordinate is the same as the one in the image-like feature.
+For "instance_placement_gcell", the coordinate is the same as the one in the image-like feature, which is in GCell grids, and the value indicates which GCell the instance is in.
+
+For "instance_placement_micron", the coordinate is in micron, and the value indicates the . It can be converted to GCell grids through dividing the width of GCell (available in the corresponding DEF files).
+
 
 The dictionary can be loaded with
 

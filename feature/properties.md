@@ -1,12 +1,13 @@
 # Basic Properties
-All features are tile-based. Most information in layout is mapped into tiles with a size of 1.5$$\mu$$m$$\times$$1.5$$\mu$$m.
+## CircuitNet-N28
+All features under directories routability_features and IR_drop_features are tile-based. Most information in layout is mapped into tiles with a size of 1.5$$\mu$$m$$\times$$1.5$$\mu$$m.
 Moreover, layouts are around 450$$\mu$$m$$\times$$450$$\mu$$m, resulting in feature maps of around 300$$\times$$300 tiles. **In summary, most of the feature maps are 2-dimension numpy array [w, h] unless otherwise indicated.** Their detailed calculations are described in the following sections.
 
 Note that the features need to be preprocessed for training, including resizing and normalization. We provide script of our customized preprocessing method used in our experiment, but there is more than one way to complete preprocessing.
 
 
 
-# Naming Conventions
+### Naming Conventions
 
 10242 samples are generated for feature extraction from 6 original RTL designs with variations in synthesis and physical design as shown in table below. 
 

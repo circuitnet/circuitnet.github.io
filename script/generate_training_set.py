@@ -36,30 +36,18 @@ def save_npy(out_list, save_path, name):
     np.save(os.path.join(save_path, name), output)
 
 def pack_data(args, name_list, read_feature_list, read_label_list, save_path):
-    feature_save_path = os.path.join(args.save_path, args.task, 'feature')
-    os.system("mkdir -p %s " % (feature_save_path))
-    label_save_path = os.path.join(args.save_path, args.task, 'label')
-    os.system("mkdir -p %s " % (label_save_path))
+
 
     for name in name_list:
-        out_feature_list = []
+
         for feature_name in read_feature_list:
+            out_feature_list = []
+            feature_save_path = os.path.join(args.save_path, args.task, name)
+            os.system("mkdir -p %s " % (feature_save_path))
             name = os.path.basename(name)
             feature = np.load(os.path.join(args.data_path, feature_name, name))
-            if args.task == 'congestion':
-                feature = std(resize(feature))
-                out_feature_list.append(feature)
-            elif args.task == 'DRC':
-                feature = std(resize(feature))
-                out_feature_list.append(feature)
-            elif args.task == 'IR_drop':   
-                if feature_name == 'IR_drop_features_decompressed/power_t':
-                    for i in range(20):
-                        slice = feature[i,:,:]
-                        out_feature_list.append(std(resize(slice)))
-                else:
-                    feature = std(resize(feature.squeeze()))
-                    out_feature_list.append(feature)
+            if args.task == 'IR_drop':   
+                out_feature = feature*2.25
             else:
                 raise ValueError('Task not implemented')
 
@@ -67,6 +55,8 @@ def pack_data(args, name_list, read_feature_list, read_label_list, save_path):
 
         out_label_list = []
         for label_name in read_label_list:
+            label_save_path = os.path.join(args.save_path, args.task, 'label')
+            os.system("mkdir -p %s " % (label_save_path))
             name = os.path.basename(name)
             label = np.load(os.path.join(args.data_path, label_name, name))
             if args.task == 'congestion': 

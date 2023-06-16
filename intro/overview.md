@@ -1,11 +1,11 @@
 # Dataset Overview
 
-The dataset now mainly provide support for three cross-stage prediction tasks in back-end design: congestion prediction, DRC violations prediction and IR drop prediction. The common practice in these tasks is to leverage computer vision methods(e.g. CNN or FCN), thus the main part of CircuitNet is 2D image-like data.
+The dataset provide multi-modal features, i.e., image and graph, to support for four cross-stage prediction tasks in back-end design: congestion prediction, DRC violations prediction, IR drop prediction and net delay prediction. For the first three tasks, the common practice is to leverage computer vision methods (e.g. CNN or FCN), thus the main part of CircuitNet for these tasks is 2D image-like data. In addition, for congestion prediction and net delay prediction, that can be completed on graph, we also provide graph features to support graph construction.
 
 
 ## Image-like Feature Maps
 
-The information on layout is converted into image-like feature maps based on tiles of size 
+The information in layout is converted into image-like feature maps based on tiles of size 
 
 1.5$$\mu$$m$$\times$$1.5$$\mu$$m, and they make up the main part of CircuitNet. 
 
@@ -35,15 +35,26 @@ The information on layout is converted into image-like feature maps based on til
 
   (3) IR drop: the IR drop value on each node from a vectorless power rail analysis.
 
+## Graph Features
+
+The connectivity of the design along with possible node and edge features are saved to enable prediction tasks on graph. See the [graph feature page](https://circuitnet.github.io/feature/graph.html) for more detailed descriptions. 
+
+- **Graph Features from Netlist after Synthesis**:
+  
+    This is intended for GNN based congestion prediction. We provide the pin to cell and pin to net mapping from the netlist to enable graph construction and the instance (cell) placement (in both micron and Gcell coordinate) as cell features.
+
+- **Graph Features from SDF (standard delay format)**:
+  
+    This is intended for GNN based net delay prediction. We provide the pin oriented graph from the SDF file and pin positions as node features.
+
 ## Supported Prediction Tasks
 
 ### Congestion Prediction
 Predict congestion at post-placement stages.
 
 Input features:
-- Macro region
-- RUDY
-- Pin RUDY
+- For CNN: Macro Region, RUDY, Pin RUDY
+- For GNN: Instance Placement 
   
 Label:
 
@@ -75,3 +86,13 @@ Label:
 
 IR drop
 
+### Net Delay Prediction
+Predict net delay after routing at post-placement stages.
+
+Input features:
+
+Pin positions
+
+Label:
+
+Net delay
