@@ -10,12 +10,13 @@
     * [Congestion Prediction](tutorial/experiment_tutorial.md#Congestion)
     * [DRC Violation Prediction](tutorial/experiment_tutorial.md#DRC)
     * [IR Drop Prediction](tutorial/experiment_tutorial.md#IR)
-    <!-- * [Net Delay Prediction](tutorial/experiment_tutorial5.md#IR)
-    * [Feature Extraction](tutorial/experiment_tutorial5.md#IR) -->
+    * [Net Delay Prediction](tutorial/experiment_tutorial.md#Net_Delay)
+    <!-- * [Feature Extraction](tutorial/experiment_tutorial5.md#IR) -->
 * [Features](feature/properties.md)
   * [Routability](feature/routability features.md)
   * [IR drop](feature/ir drop features.md)
   * [Graph](feature/graph.md)
+  * [Timing](feature/timing features.md)
 <!-- * [ISEDA2023](iseda2023_tutorial.md) -->
 * [License](license.md)
 

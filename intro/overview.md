@@ -7,9 +7,9 @@ The dataset provide multi-modal features, i.e., image and graph, to support for 
 
 The information in layout is converted into image-like feature maps based on tiles of size 
 
-1.5$$\mu$$m$$\times$$1.5$$\mu$$m, and they make up the main part of CircuitNet. 
+2.25$$\mu$$m$$\times$$2.25$$\mu$$m, and they make up the main part of CircuitNet. 
 
-<img src="../pics/features.png">
+<img src="../pics/flow-0607.png">
 
 - **Macro Region**:
    

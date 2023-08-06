@@ -100,10 +100,10 @@ class Decoder(nn.Module):
         d3 = self.conv2(d2)
         d4 = self.upc2(torch.cat([d3, skip], dim=1))
         output = self.conv3(d4)  # shortpath from 2->7
-        return output  return self.main(input)
+        return output
 ```
 
-In this work, three features are selected as input features to feed into the model. The included features are (1)macro_region, (2)RUDY, (3)RUDY_pin, and they are preprocessed and combined together as one numpy array by the provided script `generate_training_set.py` (check the [quick start page](https://circuitnet.github.io/intro/quickstart.html) for usage of the script). The visualization of the array is shown in Fig 2.
+In this work, three features are selected as input features to feed into the model. The included features are (1)macro_region, (2)RUDY, (3)RUDY_pin, and they are preprocessed and combined together as one numpy array by the provided script `generate_training_set.py` (check the [download page](https://circuitnet.github.io/intro/download.html) for usage of the script). The visualization of the array is shown in Fig 2.
 
 <div align="center">
   <img src="../pics/tutorial/congestion_input.png"  width="300">
@@ -312,7 +312,7 @@ class Decoder(nn.Module):
         d3 = self.conv2(d2)
         d4 = self.upc2(torch.cat([d3, skip], dim=1))
         output = self.conv3(d4)  # shortpath from 2->7
-        return output  return self.main(input)
+        return output
 ```
 
 In this work, nine features are selected as input features to feed into the model. The included features are (1)macro_region, (2)cell_density, (3)RUDY_long, (4)RUDY_short, (5)RUDY_pin_long, (6)congestion_eGR_horizontal_overflow, (7)congestion_eGR_vertical_overflow, (8)congestion_GR_horizontal_overflow, (9)congestion_GR_vertical_overflow. Again, these features are preprocessed and combined together as one numpy array. The visualization of the array is shown in Fig 6.
@@ -673,6 +673,155 @@ In this work, the tiles have IR drop value exceeding the threshold are regarded 
   <b>Fig 14</b> ROC curve.
 </div>
 
+
+### Net Delay Prediction <div id="Net_Delay"></div>
+
+Net Delay is the delay of signal on interconnect nets that derived from the parasitic capacitance and resistance. Calculating net delay is a curcial step in static timing analysis (STA), which is necessary in ensuring the correct functionallity of the sequential logic. But before detailed routing, like during placement, the precise net delay cannot be calculated, as the routing of the net has not been decided, so we need to predict net delay at pre-routing stages, and what we know is the positions of pins and the connectivity of the net. And on the other hand, predicting net delay is essentially predicting the routing of the net. 
+
+In this task, our problem formulation is to predict net delay after detailed routing from the pin postions and net topology at placement stage.
+During routing, a net is shown in Fig 15. It always has 1 source pin and can have 1 or multiple sink pins. During routing, a tree structured net will connect the source pin to all sink pins, and the structure of the net is related to all pin positions, because the tree is a Steiner tree and the Steiner point might be inserted near pin clusters. In addition, the net delay is the delay from the source pin to 1 sink pin.
+
+So a graph neural network (GNN) can be used to exchange information within all nodes (pins) and predict net delay (can be a feature on edge).
+The network is developed from the net embedding part of [the open source code](https://github.com/TimingPredict/TimingPredict) from `A Timing Engine Inspired Graph Neural Network Model for Pre-Routing Slack Prediction` [4]. 
+<!-- More details can be viewed in our repository. -->
+
+<div align="center">
+  <img src="../pics/tutorial/net.png"  width="600">
+  <br>
+  <b>Fig 15</b> Illustration of a net.
+</div>
+
+
+Firstly, build a graph with the timing features, net_edges, nodes and pin_positions, from CircuitNet.
+
+```python
+import torch
+import dgl
+import numpy as np
+
+net_edges = np.load('path to net_edges.npz')['net_edges']
+nodes = np.load('path to nodes.npz')['nodes']
+pin_positions = np.load('path to pin_positions.npz'), allow_pickle=True)['pin_positions'].item()
+
+# build a bi-direction graph for bi-direction message passing
+g = dgl.heterograph({
+('node', 'net_out', 'node'): (net_edges[:,0], net_edges[:,1]),
+('node', 'net_in', 'node'): (net_edges[:,1], net_edges[:,0]),
+})
+
+# assign net_delay to edge feature, which will be used as label in the following.
+g.edges['net_out'].data['net_delay'] = torch.tensor(net_edges[:,2:]).type(torch.float32)
+
+# assign pin_positions to node feature.
+g.ndata['nf'] = torch.tensor([pin_positions[nodes[i.item()].replace('\\','')][0:4] for i in g.nodes()]).type(torch.float32)
+g.edges['net_out'].data['net_delays_log'] = (torch.log(0.0001 + g.edges['net_out'].data['net_delay']) + 9.211) # log(0.0001) ≈ -9.211
+```
+
+Then, we define the GNN model.
+
+```python
+import torch.nn.functional as F
+import dgl.function as fn
+
+class MLP(torch.nn.Module):
+    def __init__(self, *sizes, batchnorm=False):
+        super().__init__()
+        fcs = []
+        for i in range(1, len(sizes)):
+            fcs.append(torch.nn.Linear(sizes[i - 1], sizes[i]))
+            if i < len(sizes) - 1:
+                fcs.append(torch.nn.LeakyReLU(negative_slope=0.2))
+                if batchnorm: fcs.append(torch.nn.BatchNorm1d(sizes[i]))
+        self.layers = torch.nn.Sequential(*fcs)
+
+    def forward(self, x):
+        return self.layers(x)
+
+class NetConv(torch.nn.Module):
+    def __init__(self, in_nf, in_ef, out_nf, h1=16, h2=16):
+        super().__init__()
+        self.in_nf = in_nf
+        self.in_ef = in_ef
+        self.out_nf = out_nf
+        self.h1 = h1
+        self.h2 = h2
+        self.MLP_msg_i2o = MLP(self.in_nf * 2 , 32, 32, 32, 1 + self.h1 + self.h2)
+        self.MLP_reduce_o = MLP(self.in_nf + self.h1 + self.h2, 32, 32, 32, self.out_nf)
+        self.MLP_msg_o2i = MLP(self.in_nf * 2, 32, 32, 32, 32, self.out_nf)
+        self.MLP_readout = MLP(self.in_nf * 2, 32, 32, 32, 32, self.out_nf)
+
+    def edge_msg_i(self, edges):
+        x = torch.cat([edges.src['nf'], edges.dst['nf']], dim=1)
+        x = self.MLP_msg_o2i(x)
+        return {'efi': x}
+    
+    def edge_msg_o(self, edges):
+        x = torch.cat([edges.src['nf'], edges.dst['nf']], dim=1)
+        x = self.MLP_msg_i2o(x)
+        k, f1, f2 = torch.split(x, [1, self.h1, self.h2], dim=1)
+        k = torch.sigmoid(k)
+        return {'efo1': f1 * k, 'efo2': f2 * k}
+
+    def node_reduce_o(self, nodes):
+        x = torch.cat([nodes.data['nf'], nodes.data['nfo1'], nodes.data['nfo2']], dim=1)
+        x = self.MLP_reduce_o(x)
+        return {'new_nf': x}
+
+    def edge_readout(self, edges):
+        x = torch.cat([edges.src['nf'], edges.dst['nf']], dim=1)
+        x = self.MLP_readout(x)
+        return {'nef': x}
+    
+    def forward(self, g, nf):
+        with g.local_scope():
+            g.ndata['nf'] = nf
+            # input nodes
+            g.apply_edges(self.edge_readout, etype='net_out')  # message passing from source to sink
+            g.update_all(self.edge_msg_i, fn.sum('efi', 'new_nf'), etype='net_out') # read out net delay prediction
+            # output nodes
+            g.apply_edges(self.edge_msg_o, etype='net_in')     # message passing from sink to source
+            g.update_all(fn.copy_e('efo1', 'efo1'), fn.sum('efo1', 'nfo1'), etype='net_in')
+            g.update_all(fn.copy_e('efo2', 'efo2'), fn.max('efo2', 'nfo2'), etype='net_in')
+            g.apply_nodes(self.node_reduce_o)
+            
+            return g.ndata['new_nf'], g.edges['net_out'].data['nef'] 
+
+class NetDelayPrediction(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.nc1 = NetConv(4, 0, 16)
+        self.nc2 = NetConv(16, 0, 16)
+        self.nc3 = NetConv(16, 0, 4)
+
+    def forward(self, g, groundtruth=False):
+        nf0 = g.ndata['nf']
+        x, _ = self.nc1(g, nf0)
+        x, _ = self.nc2(g, x)
+        _, net_delays = self.nc3(g, x)
+        return net_delays
+```
+
+Finally, we can train the model with the graph we built.
+
+```
+model = NetDelayPrediction()
+model.cuda()
+
+optimizer = torch.optim.Adam(model.parameters(), lr=0.0005)
+train_loss_tot_net_delays = 0
+optimizer.zero_grad()
+
+pred_net_delays= model(g, groundtruth=args.groundtruth)
+loss_net_delays = 0
+
+loss_net_delays = F.mse_loss(pred_net_delays, g.edges['net_out'].data['net_delays_log'])
+train_loss_tot_net_delays += loss_net_delays.item()
+loss_net_delays.backward()
+optimizer.step()
+
+```
+
+
 # Citation
 ```
 [1] S. Liu, et al. “Global Placement with Deep Learning- Enabled Explicit Routability Optimization,” in DATE 2021. 1821–1824.
@@ -680,4 +829,7 @@ In this work, the tiles have IR drop value exceeding the threshold are regarded 
 [2] Z. Xie, et al. “RouteNet: Routability prediction for mixed-size designs using convolutional neural network,” in ICCAD 2018. 1–8.
 
 [3] V. A. Chhabria, et al. “MAVIREC: ML-Aided Vectored IR-Drop Estimation and Classification,” in DATE 2021. 1825–1828.
+
+[4] Z. Guo, et al. “A Timing Engine Inspired Graph Neural Network Model for Pre-Routing Slack Prediction,” in DATE 2021. 1825–1828.
+,” in DAC 2022. 1207-1212. 
 ```
