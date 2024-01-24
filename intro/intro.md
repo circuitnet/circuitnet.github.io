@@ -10,7 +10,7 @@ We now have 3 variations of datasets, **CircuitNet-N28**, **CircuitNet-N14** and
 
 **CircuitNet-N14** is the advanced version of CircuitNet-N28. It includes more designs other than RISC-V, including GPU and ML accelerator, and based on 14nm FinFET technology. This dataset only supports congestion prediction, IR drop prediction and net delay prediction, but will extends to DRC prediction in the future.
 
-**ISPD2015** is based on the [ISPD2015 contest benchmark](https://www.ispd.cc/contests/15/ispd2015contest.html). Due to the original purpose of the benchmark, this dataset only supports congestion prediction, but will extends to other DRC prediction in the future.
+**CircuitNet-ISPD15** is based on the [ISPD2015 contest benchmark](https://www.ispd.cc/contests/15/ispd2015contest.html). Due to the original purpose of the benchmark, this dataset only supports congestion prediction, but will extends to DRC prediction in the future.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -46,7 +46,7 @@ We now have 3 variations of datasets, **CircuitNet-N28**, **CircuitNet-N14** and
     <td class="tg-0lax">yes</td>
   </tr>
   <tr>
-    <td class="tg-0lax">ISPD2015</td>
+    <td class="tg-0lax">CircuitNet-ISPD20</td>
     <td class="tg-0lax">yes</td>
     <td class="tg-0lax">no</td>
     <td class="tg-0lax">N/A</td>
@@ -95,13 +95,14 @@ They share a similar directory structure:
 | ├── power_t
 | └── IR_drop
 ├── graph_features
-| ├── flatten_netlist
-| ├── hierarchical_netlist
 | ├── graph_information
 | └── instance_placement
-├── LEF&DEF
-├── doc
-| └── user_guide.pdf  
+├── timing_features
+| ├── pin_positions
+| └── timing_features
+├── raw_data
+| ├── LEF&DEF
+| └── instance_placement
 └── script
   ├── decompress_routability.py
   ├── decompress_IR_drop.py

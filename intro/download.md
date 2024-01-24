@@ -37,7 +37,7 @@ Based on your target tasks, download Routability Features (for congestion and DR
     (2) Construct graph with our sample code. (coming soon)
 
 ## Raw Data
-We provide netlist and LEF/DEF for user-defined feature extraction. The sample code for feature extraction is coming soon.
+We provide netlist and LEF/DEF for user-defined feature extraction. The [sample code for feature extraction](https://github.com/circuitnet/CircuitNet/tree/main/feature_extraction) has been released.
 
 
 

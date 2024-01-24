@@ -15,22 +15,42 @@ This project is under active development. We are expanding the dataset to includ
 
 ### Citation
 
-[Paper Link](https://www.sciengine.com/SCIS/doi/10.1007/s11432-022-3571-8)
+[TCAD](https://ieeexplore.ieee.org/document/10158384)
 
 ```
-@article{chai2022circuitnet,
-  title = {CircuitNet: An Open-Source Dataset for Machine Learning Applications in Electronic Design Automation (EDA)},
-  author = {Chai, Zhuomin and Zhao, Yuxiang and Lin, Yibo and Liu, Wei and Wang, Runsheng and Huang, Ru},
-  journal= {SCIENCE CHINA Information Sciences},
-  volume={65},
-  number = "12",
-  pages={227401-},
-  year = {2022}
+@ARTICLE{10158384,
+  author={Chai, Zhuomin and Zhao, Yuxiang and Liu, Wei and Lin, Yibo and Wang, Runsheng and Huang, Ru},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={CircuitNet: An Open-Source Dataset for Machine Learning in VLSI CAD Applications with Improved Domain-Specific Evaluation Metric and Learning Strategies}, 
+  year={2023},
+  doi={10.1109/TCAD.2023.3287970}}
+}
+
+```
+
+[ICLR](https://openreview.net/forum?id=nMFSUjxMIl)
+
+```
+@inproceedings{
+2024circuitnet,
+title={CircuitNet 2.0: An Advanced Dataset for Promoting Machine Learning Innovations in Realistic Chip Design Environment},
+author={Xun, Jiang and Chai, Zhuomin and Zhao, Yuxiang and Lin, Yibo and Wang, Runsheng and Huang, Ru},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=nMFSUjxMIl}
 }
 
 ```
 
 ### Change Log
+- 2023/7/24
+
+  Code for feature extraction released. Users can use it to implement self-defined features with the LEF/DEF we released or extract features with LEF/DEF from other sources. Read the [REAME](https://github.com/circuitnet/CircuitNet/blob/main/feature_extraction/README.md) for more information.
+
+- 2023/6/29
+
+  Code for net delay prediction released. A simple tutorial on net delay prediction is added to [our website](https://circuitnet.github.io/tutorial/experiment_tutorial.html#Net_Delay).
+
 - 2023/6/14
 
   The original dataset is renamed to CircuitNet-N28, and additional timing features are released.
