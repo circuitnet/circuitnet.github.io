@@ -1,0 +1,1204 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Tutorial · CircuitNet</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Zhuomin Chai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="experiment_tutorial.html" />
+    
+    
+    <link rel="prev" href="../intro/FAQ.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../intro/intro.html">
+            
+                <a href="../intro/intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro/download.html">
+            
+                <a href="../intro/download.html">
+            
+                    
+                    Download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro/overview.html">
+            
+                <a href="../intro/overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../intro/FAQ.html">
+            
+                <a href="../intro/FAQ.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="experiment_tutorial.html">
+            
+                <a href="experiment_tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="experiment_tutorial.html">
+            
+                <a href="experiment_tutorial.html#Congestion">
+            
+                    
+                    Congestion Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="experiment_tutorial.html">
+            
+                <a href="experiment_tutorial.html#DRC">
+            
+                    
+                    DRC Violation Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="experiment_tutorial.html">
+            
+                <a href="experiment_tutorial.html#IR">
+            
+                    
+                    IR Drop Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="experiment_tutorial.html">
+            
+                <a href="experiment_tutorial.html#Net_Delay">
+            
+                    
+                    Net Delay Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../feature/properties.html">
+            
+                <a href="../feature/properties.html">
+            
+                    
+                    Features
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../feature/routability features.html">
+            
+                <a href="../feature/routability features.html">
+            
+                    
+                    Routability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../feature/ir drop features.html">
+            
+                <a href="../feature/ir drop features.html">
+            
+                    
+                    IR drop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../feature/graph.html">
+            
+                <a href="../feature/graph.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../feature/timing features.html">
+            
+                <a href="../feature/timing features.html">
+            
+                    
+                    Timing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../license.html">
+            
+                <a href="../license.html">
+            
+                    
+                    License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Tutorial</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="tutorial">Tutorial</h2>
+<hr>
+<p>Herein, we select several representative methods to give a brief introduction of applying machine learning to VLSI physical design cycle that provides an intuitive awareness of the functionality and practicability of <code>CircuirNet</code> to users. Please refer to our github repository <a href="https://github.com/circuitnet/CircuitNet" target="_blank">https://github.com/circuitnet/CircuitNet</a> for the entire example. </p>
+<p>Note that all three selected methods utilize image-like features to train a generative model, such as fully convolutional networks (FCNs) and U-Net, formulating the prediction task into an image-to-image translation task. We did our best to reproduce the experimental environment in the original paper, including model architecture, feature selection and loss. The name of the features are matched with the ones in CircuitNet to avoid confusion.</p>
+<h3 id="congestion-prediction-">Congestion Prediction <div id="Congestion"></div></h3>
+<p>Congestion is defined as the overflow of routing demand over available routing resource in the routing stage of the back-end design. It is frequently adopted as the metric to evaluate routability, i.e., the prospective quality of routing based on the current design solution. 
+The congestion prediction is necessary to guide the optimization in placement stage and reduce total turn-around time.</p>
+<p>The network of <code>Global Placement with Deep Learning-Enabled Explicit Routability Optimization</code> [1] uses an FCN based encoder-decoder architecture to translate the image-like features into a congestion map. The architecture is shown in Fig 1.</p>
+<div align="center">
+  <img src="../pics/tutorial/congestion_model.png" width="600">
+  <br>
+  <b>Fig 1</b> Model architecture.
+</div>
+
+
+
+<p>The generation network consists of two fundamental modules, encoder and decoder, which are designed according to the architecture illustrated in Fig 1.</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">conv</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, dim_in, dim_out, kernel_size=<span class="hljs-number">3</span>, stride=<span class="hljs-number">1</span>, padding=<span class="hljs-number">1</span>, bias=True)</span>:</span>
+        super(conv, self).__init__()
+        self.main = nn.Sequential(
+            nn.Conv2d(dim_in, dim_out, kernel_size=kernel_size, stride=stride, padding=padding, bias=bias),
+            nn.InstanceNorm2d(dim_out, affine=<span class="hljs-keyword">True</span>),
+            nn.LeakyReLU(<span class="hljs-number">0.2</span>, inplace=<span class="hljs-keyword">True</span>),
+            nn.Conv2d(dim_out, dim_out, kernel_size=kernel_size, stride=stride, padding=padding, bias=bias),
+            nn.InstanceNorm2d(dim_out, affine=<span class="hljs-keyword">True</span>),
+            nn.LeakyReLU(<span class="hljs-number">0.2</span>, inplace=<span class="hljs-keyword">True</span>),
+        )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        <span class="hljs-keyword">return</span> self.main(input)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">upconv</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, dim_in, dim_out)</span>:</span>
+        super(upconv, self).__init__()
+        self.main = nn.Sequential(
+                nn.ConvTranspose2d(dim_in, dim_out, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>),
+                nn.InstanceNorm2d(dim_out, affine=<span class="hljs-keyword">True</span>),
+                nn.LeakyReLU(<span class="hljs-number">0.2</span>, inplace=<span class="hljs-keyword">True</span>),
+                )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        <span class="hljs-keyword">return</span> self.main(input)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Encoder</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim=<span class="hljs-number">3</span>, out_dim=<span class="hljs-number">32</span>)</span>:</span>
+        super(Encoder, self).__init__()
+        self.in_dim = in_dim
+        self.c1 = conv(in_dim, <span class="hljs-number">32</span>)
+        self.pool1 = nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>,stride=<span class="hljs-number">2</span>)
+        self.c2 = conv(<span class="hljs-number">32</span>, <span class="hljs-number">64</span>)
+        self.pool2 = nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>,stride=<span class="hljs-number">2</span>)
+        self.c3 = nn.Sequential(
+                nn.Conv2d(<span class="hljs-number">64</span>, out_dim, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>),
+                nn.BatchNorm2d(out_dim),
+                nn.Tanh()
+                )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_weights</span><span class="hljs-params">(self)</span>:</span>
+        generation_init_weights(self)
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        h1 = self.c1(input)
+        h2 = self.pool1(h1)
+        h3 = self.c2(h2)
+        h4 = self.pool2(h3)
+        h5 = self.c3(h4)
+        <span class="hljs-keyword">return</span> h5, h2  <span class="hljs-comment"># shortpath from 2-&gt;7</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decoder</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, out_dim=<span class="hljs-number">2</span>, in_dim=<span class="hljs-number">32</span>)</span>:</span>
+        super(Decoder, self).__init__()
+        self.conv1 = conv(in_dim, <span class="hljs-number">32</span>)
+        self.upc1 = upconv(<span class="hljs-number">32</span>, <span class="hljs-number">16</span>)
+        self.conv2 = conv(<span class="hljs-number">16</span>, <span class="hljs-number">16</span>)
+        self.upc2 = upconv(<span class="hljs-number">32</span>+<span class="hljs-number">16</span>, <span class="hljs-number">4</span>)
+        self.conv3 =  nn.Sequential(
+                nn.Conv2d(<span class="hljs-number">4</span>, out_dim, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>),
+                nn.Sigmoid()
+                )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_weights</span><span class="hljs-params">(self)</span>:</span>
+        generation_init_weights(self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        feature, skip = input
+        d1 = self.conv1(feature)
+        d2 = self.upc1(d1)
+        d3 = self.conv2(d2)
+        d4 = self.upc2(torch.cat([d3, skip], dim=<span class="hljs-number">1</span>))
+        output = self.conv3(d4)  <span class="hljs-comment"># shortpath from 2-&gt;7</span>
+        <span class="hljs-keyword">return</span> output
+</code></pre>
+<p>In this work, three features are selected as input features to feed into the model. The included features are (1)macro_region, (2)RUDY, (3)RUDY_pin, and they are preprocessed and combined together as one numpy array by the provided script <code>generate_training_set.py</code> (check the <a href="https://circuitnet.github.io/intro/download.html" target="_blank">download page</a> for usage of the script). The visualization of the array is shown in Fig 2.</p>
+<div align="center">
+  <img src="../pics/tutorial/congestion_input.png" width="300">
+  <br>
+  <b>Fig 2</b> Visualization of the input numpy array.
+</div>
+
+<p>We create a class called <code>CongestionDataset</code> to intake the numpy array of congestion feature and label, while reading and processing them through pytorch <code>DataLoader</code>.</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CongestionDataset</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, ann_file, dataroot, pipeline=None, test_mode=False, **kwargs)</span>:</span>
+        super().__init__()
+        self.ann_file = ann_file
+        self.dataroot = dataroot
+        self.test_mode = test_mode
+        <span class="hljs-keyword">if</span> pipeline:
+            self.pipeline = Compose(pipeline)
+        <span class="hljs-keyword">else</span>:
+            self.pipeline = <span class="hljs-keyword">None</span>
+
+        self.data_infos = self.load_annotations()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_annotations</span><span class="hljs-params">(self)</span>:</span>
+        data_infos = []
+        <span class="hljs-keyword">with</span> open(self.ann_file, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> fin:
+            <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fin:
+                feature, label = line.strip().split(<span class="hljs-string">&apos;,&apos;</span>)
+                <span class="hljs-keyword">if</span> self.dataroot <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:
+                    feature_path = osp.join(self.dataroot, feature)
+                    label_path = osp.join(self.dataroot, label)
+                data_infos.append(dict(feature_path=feature_path, label_path=label_path))
+        <span class="hljs-keyword">return</span> data_infos
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prepare_data</span><span class="hljs-params">(self, idx)</span>:</span>
+        results = copy.deepcopy(self.data_infos[idx])
+        results[<span class="hljs-string">&apos;feature&apos;</span>] = np.load(results[<span class="hljs-string">&apos;feature_path&apos;</span>])
+        results[<span class="hljs-string">&apos;label&apos;</span>] = np.load(results[<span class="hljs-string">&apos;label_path&apos;</span>])
+
+        results = self.pipeline(results) <span class="hljs-keyword">if</span> self.pipeline <span class="hljs-keyword">else</span> results
+
+        feature =  results[<span class="hljs-string">&apos;feature&apos;</span>].transpose(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>).astype(np.float32)
+        label = results[<span class="hljs-string">&apos;label&apos;</span>].transpose(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>).astype(np.float32)
+
+        <span class="hljs-keyword">return</span> feature, label, results[<span class="hljs-string">&apos;label&apos;</span>]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__len__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> len(self.data_infos)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__getitem__</span><span class="hljs-params">(self, idx)</span>:</span>
+        <span class="hljs-keyword">return</span> self.prepare_data(idx)
+</code></pre>
+<p>We train this network in an end-to-end manner and compute the loss between the output and the golden congestion map, which are the features named congestion_GR_horizontal_overflow and congestion_GR_vertical_overflow from CircuitNet. </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GPDL</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,
+                 in_channels=<span class="hljs-number">3</span>,
+                 out_channels=<span class="hljs-number">2</span>,
+                 **kwargs)</span>:</span>
+        super().__init__()
+
+        self.encoder = Encoder(in_dim=in_channels)
+        self.decoder = Decoder(out_dim=out_channels)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        x = self.encoder(x)
+        <span class="hljs-keyword">return</span> self.decoder(x)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_weights</span><span class="hljs-params">(self, pretrained=None, pretrained_transfer=None, strict=False, **kwargs)</span>:</span>
+        <span class="hljs-keyword">if</span> isinstance(pretrained, str):
+            new_dict = OrderedDict()
+            weight = torch.load(pretrained, map_location=<span class="hljs-string">&apos;cpu&apos;</span>)[<span class="hljs-string">&apos;state_dict&apos;</span>]
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> weight.keys():
+                new_dict[k] = weight[k]
+            load_state_dict(self, new_dict, strict=strict, logger=<span class="hljs-keyword">None</span>)
+        <span class="hljs-keyword">elif</span> pretrained <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            generation_init_weights(
+                self, init_type=self.init_type, init_gain=self.init_gain)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">raise</span> TypeError(<span class="hljs-string">&quot;&apos;pretrained&apos; must be a str or None. &quot;</span>
+                            f<span class="hljs-string">&apos;But received {type(pretrained)}.&apos;</span>)
+</code></pre>
+<p>The model is trained for 200k iterations. The curve of loss versus training iterations are presented in Fig 3. 
+<!-- The model is trained for 200k iterations. The curve of training loss and evaluation metrics in training are presented in Fig 3 and Fig 4.  -->
+Normalized Root-Mean-Square-Error (NRMSE) and structure similarity index measure (SSIM) are used to evaluate pixel level accuracy, and the final result of these metrics are 0.04 and 0.80 respectively.</p>
+<div align="center">
+  <img src="../pics/tutorial/congestion_loss.png" width="330">
+    <br>
+  <b>Fig 3</b> Training loss at different training iterations.
+</div>
+
+
+
+<!-- <div align="center">
+  <img src="../pics/tutorial/congestion_val.png"  width="600">
+    <br>
+  <b>Fig 4</b> Evaluation metrics(PSNR, SSIM) at different training iterations.
+</div> -->
+<p>After finishing the training procedure, we dump the visualization of the predicted congestion map, which is shown in Fig 4. The parts with high-contrast indicate the congestion hotspot.</p>
+<div align="center">
+  <img src="../pics/tutorial/congestion_output.png" width="300">
+  <br>
+  <b>Fig 4</b> Visualization of the predicted congestion map.
+</div>
+
+
+
+<h3 id="drc-violation-prediction-">DRC Violation Prediction <div id="DRC"></div></h3>
+<p>Design rule check (DRC) violation is another estimation for routability. The congestion is available after global routing, while DRC violation is reported after detailed routing. And there is a deviation between them at advanced tech node, such as 7 nm. Thus it is also necessary to predict DRC violations directly. <code>RouteNet: Routability Prediction for Mixed-Size Designs Using Convolutional Neural Network</code> [2] is a typical method for accurately predicting violation hotspots. The architecture is shown in Fig 5.</p>
+<div align="center">
+  <img src="../pics/tutorial/DRC_model.png" width="600">
+  <br>
+  <b>Fig 5</b> Model architecture.
+</div>
+
+<p>The network is the same as the one in congestion prediction . </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">conv</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, dim_in, dim_out, kernel_size=<span class="hljs-number">3</span>, stride=<span class="hljs-number">1</span>, padding=<span class="hljs-number">1</span>, bias=True)</span>:</span>
+        super(conv, self).__init__()
+        self.main = nn.Sequential(
+            nn.Conv2d(dim_in, dim_out, kernel_size=kernel_size, stride=stride, padding=padding, bias=bias),
+            nn.InstanceNorm2d(dim_out, affine=<span class="hljs-keyword">True</span>),
+            nn.LeakyReLU(<span class="hljs-number">0.2</span>, inplace=<span class="hljs-keyword">True</span>),
+            nn.Conv2d(dim_out, dim_out, kernel_size=kernel_size, stride=stride, padding=padding, bias=bias),
+            nn.InstanceNorm2d(dim_out, affine=<span class="hljs-keyword">True</span>),
+            nn.LeakyReLU(<span class="hljs-number">0.2</span>, inplace=<span class="hljs-keyword">True</span>),
+        )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        <span class="hljs-keyword">return</span> self.main(input)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">upconv</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, dim_in, dim_out)</span>:</span>
+        super(upconv, self).__init__()
+        self.main = nn.Sequential(
+                nn.ConvTranspose2d(dim_in, dim_out, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>),
+                nn.InstanceNorm2d(dim_out, affine=<span class="hljs-keyword">True</span>),
+                nn.LeakyReLU(<span class="hljs-number">0.2</span>, inplace=<span class="hljs-keyword">True</span>),
+                )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        <span class="hljs-keyword">return</span> self.main(input)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Encoder</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_dim=<span class="hljs-number">3</span>, out_dim=<span class="hljs-number">32</span>)</span>:</span>
+        super(Encoder, self).__init__()
+        self.in_dim = in_dim
+        self.c1 = conv(in_dim, <span class="hljs-number">32</span>)
+        self.pool1 = nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>,stride=<span class="hljs-number">2</span>)
+        self.c2 = conv(<span class="hljs-number">32</span>, <span class="hljs-number">64</span>)
+        self.pool2 = nn.MaxPool2d(kernel_size=<span class="hljs-number">2</span>,stride=<span class="hljs-number">2</span>)
+        self.c3 = nn.Sequential(
+                nn.Conv2d(<span class="hljs-number">64</span>, out_dim, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>),
+                nn.BatchNorm2d(out_dim),
+                nn.Tanh()
+                )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_weights</span><span class="hljs-params">(self)</span>:</span>
+        generation_init_weights(self)
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        h1 = self.c1(input)
+        h2 = self.pool1(h1)
+        h3 = self.c2(h2)
+        h4 = self.pool2(h3)
+        h5 = self.c3(h4)
+        <span class="hljs-keyword">return</span> h5, h2  <span class="hljs-comment"># shortpath from 2-&gt;7</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Decoder</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, out_dim=<span class="hljs-number">2</span>, in_dim=<span class="hljs-number">32</span>)</span>:</span>
+        super(Decoder, self).__init__()
+        self.conv1 = conv(in_dim, <span class="hljs-number">32</span>)
+        self.upc1 = upconv(<span class="hljs-number">32</span>, <span class="hljs-number">16</span>)
+        self.conv2 = conv(<span class="hljs-number">16</span>, <span class="hljs-number">16</span>)
+        self.upc2 = upconv(<span class="hljs-number">32</span>+<span class="hljs-number">16</span>, <span class="hljs-number">4</span>)
+        self.conv3 =  nn.Sequential(
+                nn.Conv2d(<span class="hljs-number">4</span>, out_dim, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>),
+                nn.Sigmoid()
+                )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_weights</span><span class="hljs-params">(self)</span>:</span>
+        generation_init_weights(self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, input)</span>:</span>
+        feature, skip = input
+        d1 = self.conv1(feature)
+        d2 = self.upc1(d1)
+        d3 = self.conv2(d2)
+        d4 = self.upc2(torch.cat([d3, skip], dim=<span class="hljs-number">1</span>))
+        output = self.conv3(d4)  <span class="hljs-comment"># shortpath from 2-&gt;7</span>
+        <span class="hljs-keyword">return</span> output
+</code></pre>
+<p>In this work, nine features are selected as input features to feed into the model. The included features are (1)macro_region, (2)cell_density, (3)RUDY_long, (4)RUDY_short, (5)RUDY_pin_long, (6)congestion_eGR_horizontal_overflow, (7)congestion_eGR_vertical_overflow, (8)congestion_GR_horizontal_overflow, (9)congestion_GR_vertical_overflow. Again, these features are preprocessed and combined together as one numpy array. The visualization of the array is shown in Fig 6.</p>
+<div align="center">
+  <img src="../pics/tutorial/DRC_input.png" width="300">
+    <br>
+  <b>Fig 6</b> Visualization of the input numpy array.
+</div>
+
+<p>We create a class called <code>DRCDataset</code> to intake the numpy array of congestion feature and label, while reading and processing them through pytorch <code>DataLoader</code>.</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DRCDataset</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, ann_file, dataroot, test_mode=None, **kwargs)</span>:</span>
+        super().__init__()
+        self.ann_file = ann_file
+        self.dataroot = dataroot
+        self.test_mode = test_mode
+        self.data_infos = self.load_annotations()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_annotations</span><span class="hljs-params">(self)</span>:</span>
+        data_infos = []
+        <span class="hljs-keyword">with</span> open(self.ann_file, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> fin:
+            <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fin:
+                feature, label = line.strip().split(<span class="hljs-string">&apos;,&apos;</span>)
+                <span class="hljs-keyword">if</span> self.dataroot <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:
+                    feature_path = osp.join(self.dataroot, feature)
+                    label_path = osp.join(self.dataroot, label)
+                data_infos.append(dict(feature_path=feature_path, label_path=label_path))
+        <span class="hljs-keyword">return</span> data_infos
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prepare_data</span><span class="hljs-params">(self, idx)</span>:</span>
+        results = copy.deepcopy(self.data_infos[idx])
+
+        feature = np.load(results[<span class="hljs-string">&apos;feature_path&apos;</span>]).transpose(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>).astype(np.float32)
+        label = np.load(results[<span class="hljs-string">&apos;label_path&apos;</span>]).transpose(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>).astype(np.float32)
+
+        <span class="hljs-keyword">return</span> feature, label, results[<span class="hljs-string">&apos;label_path&apos;</span>]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__len__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> len(self.data_infos)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__getitem__</span><span class="hljs-params">(self, idx)</span>:</span>
+        <span class="hljs-keyword">return</span> self.prepare_data(idx)
+</code></pre>
+<p>We train this network in an end-to-end manner and compute the loss between the output and the golden DRC violations map, which is the feature named DRC_all from CircuitNet. </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RouteNet</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,
+                 in_channels=<span class="hljs-number">9</span>,
+                 out_channels=<span class="hljs-number">2</span>,
+                 **kwargs)</span>:</span>
+        super().__init__()
+
+        self.encoder = Encoder(in_dim=in_channels)
+        self.decoder = Decoder(out_dim=out_channels)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        x = self.encoder(x)
+        <span class="hljs-keyword">return</span> self.decoder(x)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_weights</span><span class="hljs-params">(self, pretrained=None, pretrained_transfer=None, strict=False, **kwargs)</span>:</span>
+        <span class="hljs-keyword">if</span> isinstance(pretrained, str):
+            new_dict = OrderedDict()
+            weight = torch.load(pretrained, map_location=<span class="hljs-string">&apos;cpu&apos;</span>)[<span class="hljs-string">&apos;state_dict&apos;</span>]
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> weight.keys():
+                new_dict[k] = weight[k]
+
+            new_dict_clone = new_dict.copy()
+            <span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> new_dict_clone.items():
+                <span class="hljs-keyword">if</span> key.endswith((<span class="hljs-string">&apos;running_mean&apos;</span>, <span class="hljs-string">&apos;running_var&apos;</span>)):
+                    <span class="hljs-keyword">del</span> new_dict[key]
+
+            load_state_dict(self, new_dict, strict=strict, logger=<span class="hljs-keyword">None</span>)
+        <span class="hljs-keyword">elif</span> pretrained <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            generation_init_weights(
+                self, init_type=self.init_type, init_gain=self.init_gain)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">raise</span> TypeError(<span class="hljs-string">&quot;&apos;pretrained&apos; must be a str or None. &quot;</span>
+                            f<span class="hljs-string">&apos;But received {type(pretrained)}.&apos;</span>)
+</code></pre>
+<p>The model is trained for 200k iterations. The curve of training loss is presented in Fig 7.</p>
+<div align="center">
+  <img src="../pics/tutorial/DRC_loss.png" width="330">
+    <br>
+  <b>Fig 7</b> Training loss at different training iterations.
+</div>
+
+
+<p>The DRC violations map provides the number of DRC violations in each tile, i.e., in each Gcell in the layout. The visualization of the DRC violations map is shown in Fig 8.</p>
+<div align="center">
+  <img src="../pics/tutorial/DRC_output.png" width="300">
+    <br>
+  <b>Fig 8</b> Visualization of the DRC violations map.
+</div>
+In this work, the tiles have number of violations exceeding the threshold are regarded as hotspots. The hotspots are much less than non-hotspot, which is imbalanced, thus the evaluation metric, receiver operating characteristic (ROC) curve, is adopted to evaluate the performance of the method. The result is shown in Fig 9. 
+
+<div align="center">
+  <img src="../pics/tutorial/drc_roc_routenet.png" width="291">=
+    <br>
+  <b>Fig 9</b> ROC curve.
+</div>
+
+<h3 id="ir-drop-prediction-">IR Drop Prediction <div id="IR"></div></h3>
+<p>IR drop is defined as deviation of voltage from reference (VDD,
+VSS) and it has to be restricted to avoid degradation in timing and
+functionality. <code>MAVIREC: ML-Aided Vectored IR-Drop Estimation and Classification</code> [3] utilizes a U-Net based network to predict IR drop. Due to the demand for joint perception along the temporal and spatial axis, MAVIREC introduces a 3D encoder to aggregate the spatio-temporal features and output the prediction result as a 2D IR drop map.</p>
+<div align="center">
+  <img src="../pics/tutorial/IR_model.png" width="600">
+    <br>
+  <b>Fig 10</b> Model architecture.
+</div>
+
+<p>The generation network consists of two fundamental modules, encoder and decoder, which are designed according to the architecture illustrated in Fig 10.</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoubleConv3d</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;(convolution =&gt; [BN] =&gt; ReLU) * 2&quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_channels, out_channels, mid_channels=None)</span>:</span>
+        super().__init__()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> mid_channels:
+            mid_channels = out_channels
+        self.double_conv = nn.Sequential(
+            nn.Conv3d(in_channels, mid_channels, kernel_size=<span class="hljs-number">3</span>, padding=(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>), bias=<span class="hljs-keyword">False</span>),
+            nn.BatchNorm3d(mid_channels),
+            nn.ReLU(inplace=<span class="hljs-keyword">True</span>),
+            nn.Conv3d(mid_channels, out_channels, kernel_size=<span class="hljs-number">3</span>, padding=(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>), bias=<span class="hljs-keyword">False</span>),
+            nn.BatchNorm3d(out_channels),
+            nn.ReLU(inplace=<span class="hljs-keyword">True</span>)
+        )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-keyword">return</span> self.double_conv(x)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoubleConv2d</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;(convolution =&gt; [BN] =&gt; ReLU) * 2&quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_channels, out_channels, mid_channels=None)</span>:</span>
+        super().__init__()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> mid_channels:
+            mid_channels = out_channels
+        self.double_conv = nn.Sequential(
+            nn.Conv2d(in_channels, mid_channels, kernel_size=<span class="hljs-number">3</span>, padding=<span class="hljs-number">1</span>, bias=<span class="hljs-keyword">False</span>),
+            nn.BatchNorm2d(mid_channels),
+            nn.ReLU(inplace=<span class="hljs-keyword">True</span>),
+            nn.Conv2d(mid_channels, out_channels, kernel_size=<span class="hljs-number">3</span>, padding=<span class="hljs-number">1</span>, bias=<span class="hljs-keyword">False</span>),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=<span class="hljs-keyword">True</span>)
+        )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-keyword">return</span> self.double_conv(x)
+
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Down</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Downscaling with maxpool then double conv&quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_channels, out_channels)</span>:</span>
+        super().__init__()
+        self.maxpool_conv = nn.Sequential(
+            nn.MaxPool3d((<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>)),
+            DoubleConv3d(in_channels, out_channels)
+        )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-keyword">return</span> self.maxpool_conv(x)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Up</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Upscaling then double conv&quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_channels, out_channels, bilinear=True)</span>:</span>
+        super().__init__()
+
+        <span class="hljs-comment"># if bilinear, use the normal convolutions to reduce the number of channels</span>
+        <span class="hljs-keyword">if</span> bilinear:
+            self.up = nn.Upsample(scale_factor=<span class="hljs-number">2</span>, mode=<span class="hljs-string">&apos;bilinear&apos;</span>, align_corners=<span class="hljs-keyword">True</span>)
+            self.conv = DoubleConv2d(in_channels, out_channels, in_channels // <span class="hljs-number">2</span>)
+        <span class="hljs-keyword">else</span>:
+            self.up = nn.ConvTranspose2d(in_channels, in_channels // <span class="hljs-number">2</span>, kernel_size=<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>)
+            self.conv = DoubleConv2d(in_channels, out_channels)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x1, x2)</span>:</span>
+        x1 = self.up(x1)
+        <span class="hljs-comment"># input is CHW</span>
+        diffY = x2.size()[<span class="hljs-number">2</span>] - x1.size()[<span class="hljs-number">2</span>]
+        diffX = x2.size()[<span class="hljs-number">3</span>] - x1.size()[<span class="hljs-number">3</span>]
+
+        x1 = F.pad(x1, [diffX // <span class="hljs-number">2</span>, diffX - diffX // <span class="hljs-number">2</span>,
+                        diffY // <span class="hljs-number">2</span>, diffY - diffY // <span class="hljs-number">2</span>])
+        x = torch.cat([x2, x1], dim=<span class="hljs-number">1</span>)
+        <span class="hljs-keyword">return</span> self.conv(x)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OutConv</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_channels, out_channels)</span>:</span>
+        super(OutConv, self).__init__()
+        self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=<span class="hljs-number">1</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-keyword">return</span> self.conv(x)
+</code></pre>
+<p>In this work, five features are selected as input features to feed into the model. The included features are (1)power_i, (2)power_s, (3)power_sca, (4)power_all, (5)power_t. Again, these features are preprocessed and combined together as one numpy array. The visualization of the array is shown in Fig 11.</p>
+<div align="center">
+  <img src="../pics/tutorial/IR_input.png" width="300">
+    <br>
+  <b>Fig 11</b> Visualization of input numpy array.
+</div>
+
+<p>We create a class called <code>IRDropDataset</code> to intake the numpy array of congestion feature and label, while reading and processing them through pytorch <code>DataLoader</code>.</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IRDropDataset</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, ann_file, dataroot, test_mode=False, **kwargs)</span>:</span>
+        super().__init__()
+        self.ann_file = ann_file
+        self.dataroot = dataroot
+        self.test_mode = test_mode
+        self.data_infos = self.load_annotations()
+
+        self.temporal_key = <span class="hljs-string">&apos;Power_t&apos;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load_annotations</span><span class="hljs-params">(self)</span>:</span>  
+        data_infos = []
+        <span class="hljs-keyword">with</span> open(self.ann_file, <span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-keyword">as</span> fin:
+            <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> fin:
+                infos = line.strip().split(<span class="hljs-string">&apos;,&apos;</span>)
+                label = infos[<span class="hljs-number">-1</span>]
+                features = infos[:<span class="hljs-number">-1</span>]
+                info_dict = dict()
+                <span class="hljs-keyword">if</span> self.dataroot <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">None</span>:
+                    <span class="hljs-keyword">for</span> feature <span class="hljs-keyword">in</span> features:
+                        info_dict[feature.split(<span class="hljs-string">&apos;/&apos;</span>)[<span class="hljs-number">0</span>]] = osp.join(self.dataroot, feature)
+                    feature_path = info_dict
+                    label_path = osp.join(self.dataroot, label)
+                data_infos.append(dict(feature_path=feature_path, label_path=label_path))
+        <span class="hljs-keyword">return</span> data_infos
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prepare_data</span><span class="hljs-params">(self, idx)</span>:</span>
+        results = copy.deepcopy(self.data_infos[idx])
+
+        feature = np.load(results[<span class="hljs-string">&apos;feature_path&apos;</span>]).transpose(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>).astype(np.float32)
+        feature = np.expand_dims(feature, axis=<span class="hljs-number">0</span>)
+        label = np.load(results[<span class="hljs-string">&apos;label_path&apos;</span>]).transpose(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>).astype(np.float32).squeeze()
+        <span class="hljs-keyword">return</span> feature, label, results[<span class="hljs-string">&apos;label_path&apos;</span>]
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__len__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> len(self.data_infos)
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__getitem__</span><span class="hljs-params">(self, idx)</span>:</span>
+        <span class="hljs-keyword">return</span> self.prepare_data(idx)
+</code></pre>
+<p>We train this network in an end-to-end manner and compute the loss between the output and the golden IR drop map, which is the feature named ir_drop from CircuitNet. </p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MAVI</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, 
+                 in_channels, 
+                 out_channels, 
+                 bilinear=False,
+                 init_cfg=dict<span class="hljs-params">(type=<span class="hljs-string">&apos;normal&apos;</span>, gain=<span class="hljs-number">0.02</span>)</span>, 
+                 **kwargs)</span>:</span>
+        super(MAVI, self).__init__()
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.bilinear = bilinear
+
+        self.inc = DoubleConv3d(in_channels, <span class="hljs-number">64</span>)
+        self.down1 = Down(<span class="hljs-number">64</span>, <span class="hljs-number">128</span>)
+        self.down2 = Down(<span class="hljs-number">128</span>, <span class="hljs-number">256</span>)
+        self.down3 = Down(<span class="hljs-number">256</span>, <span class="hljs-number">512</span>)
+        factor = <span class="hljs-number">2</span> <span class="hljs-keyword">if</span> bilinear <span class="hljs-keyword">else</span> <span class="hljs-number">1</span>
+
+        self.up1 = Up(<span class="hljs-number">512</span>, <span class="hljs-number">256</span> // factor, bilinear)
+        self.up2 = Up(<span class="hljs-number">256</span>, <span class="hljs-number">128</span> // factor, bilinear)
+        self.up3 = Up(<span class="hljs-number">128</span>, <span class="hljs-number">64</span>, bilinear)
+        self.outc = OutConv(<span class="hljs-number">64</span>, out_channels)
+
+        self.init_type = <span class="hljs-string">&apos;normal&apos;</span> <span class="hljs-keyword">if</span> init_cfg <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">else</span> init_cfg.get(
+            <span class="hljs-string">&apos;type&apos;</span>, <span class="hljs-string">&apos;normal&apos;</span>)
+        self.init_gain = <span class="hljs-number">0.02</span> <span class="hljs-keyword">if</span> init_cfg <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">else</span> init_cfg.get(
+            <span class="hljs-string">&apos;gain&apos;</span>, <span class="hljs-number">0.02</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        x_in = x[:, :, :self.out_channels, :, :] <span class="hljs-comment"># [b c 4 h w]</span>
+        x1 = self.inc(x)
+        x2 = self.down1(x1)  <span class="hljs-comment"># [1, 64, 20, 256, 256]</span>
+        x3 = self.down2(x2)  <span class="hljs-comment"># [1, 128, 16, 128, 128]</span>
+        x4 = self.down3(x3)  <span class="hljs-comment"># [1, 512, 12, 64, 64]</span>
+
+        x = self.up1(x4.mean(dim=<span class="hljs-number">2</span>), x3.mean(dim=<span class="hljs-number">2</span>))
+        x = self.up2(x, x2.mean(dim=<span class="hljs-number">2</span>))
+        x = self.up3(x, x1.mean(dim=<span class="hljs-number">2</span>))
+        logits = self.outc(x)
+
+        logits = x_in.squeeze(<span class="hljs-number">1</span>)*logits
+        <span class="hljs-keyword">return</span> torch.sum(logits, dim=<span class="hljs-number">1</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_weights</span><span class="hljs-params">(self, pretrained=None)</span>:</span>
+        <span class="hljs-keyword">if</span> isinstance(pretrained, str):
+            load_checkpoint(self, pretrained, strict=<span class="hljs-keyword">False</span>, logger=<span class="hljs-keyword">None</span>)
+        <span class="hljs-keyword">elif</span> pretrained <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> self.modules():
+                <span class="hljs-keyword">if</span> isinstance(m, (nn.BatchNorm2d, nn.GroupNorm)):
+                    constant_init(m.weight, <span class="hljs-number">1</span>)
+                    constant_init(m.bias, <span class="hljs-number">0</span>)
+
+                <span class="hljs-keyword">if</span> isinstance(m, nn.Conv3d):
+                    kaiming_init(m)
+                <span class="hljs-keyword">elif</span> isinstance(m, _BatchNorm):
+                    constant_init(m, <span class="hljs-number">1</span>)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">raise</span> TypeError(f<span class="hljs-string">&apos;&quot;pretrained&quot; must be a str or None. &apos;</span>
+                            f<span class="hljs-string">&apos;But received {type(pretrained)}.&apos;</span>)
+</code></pre>
+<p>The IR drop map provides the maximum IR drop value in each tile, i.e., in each Gcell in the layout. The visualization of the IR drop map is shown in Fig 12.</p>
+<div align="center">
+  <img src="../pics/tutorial/IR_output.png" width="300">
+    <br>
+  <b>Fig 12</b> Visualization of the IR drop map.
+</div>
+
+<p>The model is trained for 200k iterations. The curve of training loss is presented in Fig 13.</p>
+<div align="center">
+  <img src="../pics/tutorial/IR_loss.png" width="330">
+    <br>
+  <b>Fig 13</b> Training loss at different training iterations.
+</div>
+
+<p>In this work, the tiles have IR drop value exceeding the threshold are regarded as hotspots. Thus, the same evaluation metric as the DRC violation prediction task, which is the ROC curve, is adopted to evaluate the performance of the method. The result is shown in Fig 14. </p>
+<div align="center">
+  <img src="../pics/tutorial/irdrop_roc_mavi.png" width="278">
+    <br>
+  <b>Fig 14</b> ROC curve.
+</div>
+
+
+<h3 id="net-delay-prediction-">Net Delay Prediction <div id="Net_Delay"></div></h3>
+<p>Net Delay is the delay of signal on interconnect nets that derived from the parasitic capacitance and resistance. Calculating net delay is a curcial step in static timing analysis (STA), which is necessary in ensuring the correct functionallity of the sequential logic. But before detailed routing, like during placement, the precise net delay cannot be calculated, as the routing of the net has not been decided, so we need to predict net delay at pre-routing stages, and what we know is the positions of pins and the connectivity of the net. And on the other hand, predicting net delay is essentially predicting the routing of the net. </p>
+<p>In this task, our problem formulation is to predict net delay after detailed routing from the pin postions and net topology at placement stage.
+During routing, a net is shown in Fig 15. It always has 1 source pin and can have 1 or multiple sink pins. During routing, a tree structured net will connect the source pin to all sink pins, and the structure of the net is related to all pin positions, because the tree is a Steiner tree and the Steiner point might be inserted near pin clusters. In addition, the net delay is the delay from the source pin to 1 sink pin.</p>
+<p>So a graph neural network (GNN) can be used to exchange information within all nodes (pins) and predict net delay (can be a feature on edge).
+The network is developed from the net embedding part of <a href="https://github.com/TimingPredict/TimingPredict" target="_blank">the open source code</a> from <code>A Timing Engine Inspired Graph Neural Network Model for Pre-Routing Slack Prediction</code> [4]. 
+<!-- More details can be viewed in our repository. --></p>
+<div align="center">
+  <img src="../pics/tutorial/net.png" width="600">
+  <br>
+  <b>Fig 15</b> Illustration of a net.
+</div>
+
+
+<p>Firstly, build a graph with the timing features, net_edges, nodes and pin_positions, from CircuitNet.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> dgl
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+net_edges = np.load(<span class="hljs-string">&apos;path to net_edges.npz&apos;</span>)[<span class="hljs-string">&apos;net_edges&apos;</span>]
+nodes = np.load(<span class="hljs-string">&apos;path to nodes.npz&apos;</span>)[<span class="hljs-string">&apos;nodes&apos;</span>]
+pin_positions = np.load(<span class="hljs-string">&apos;path to pin_positions.npz&apos;</span>), allow_pickle=<span class="hljs-keyword">True</span>)[<span class="hljs-string">&apos;pin_positions&apos;</span>].item()
+
+<span class="hljs-comment"># build a bi-direction graph for bi-direction message passing</span>
+g = dgl.heterograph({
+(<span class="hljs-string">&apos;node&apos;</span>, <span class="hljs-string">&apos;net_out&apos;</span>, <span class="hljs-string">&apos;node&apos;</span>): (net_edges[:,<span class="hljs-number">0</span>], net_edges[:,<span class="hljs-number">1</span>]),
+(<span class="hljs-string">&apos;node&apos;</span>, <span class="hljs-string">&apos;net_in&apos;</span>, <span class="hljs-string">&apos;node&apos;</span>): (net_edges[:,<span class="hljs-number">1</span>], net_edges[:,<span class="hljs-number">0</span>]),
+})
+
+<span class="hljs-comment"># assign net_delay to edge feature, which will be used as label in the following.</span>
+g.edges[<span class="hljs-string">&apos;net_out&apos;</span>].data[<span class="hljs-string">&apos;net_delay&apos;</span>] = torch.tensor(net_edges[:,<span class="hljs-number">2</span>:]).type(torch.float32)
+
+<span class="hljs-comment"># assign pin_positions to node feature.</span>
+g.ndata[<span class="hljs-string">&apos;nf&apos;</span>] = torch.tensor([pin_positions[nodes[i.item()].replace(<span class="hljs-string">&apos;\\&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)][<span class="hljs-number">0</span>:<span class="hljs-number">4</span>] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> g.nodes()]).type(torch.float32)
+g.edges[<span class="hljs-string">&apos;net_out&apos;</span>].data[<span class="hljs-string">&apos;net_delays_log&apos;</span>] = (torch.log(<span class="hljs-number">0.0001</span> + g.edges[<span class="hljs-string">&apos;net_out&apos;</span>].data[<span class="hljs-string">&apos;net_delay&apos;</span>]) + <span class="hljs-number">9.211</span>) <span class="hljs-comment"># log(0.0001) &#x2248; -9.211</span>
+</code></pre>
+<p>Then, we define the GNN model.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> torch.nn.functional <span class="hljs-keyword">as</span> F
+<span class="hljs-keyword">import</span> dgl.function <span class="hljs-keyword">as</span> fn
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MLP</span><span class="hljs-params">(torch.nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, *sizes, batchnorm=False)</span>:</span>
+        super().__init__()
+        fcs = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, len(sizes)):
+            fcs.append(torch.nn.Linear(sizes[i - <span class="hljs-number">1</span>], sizes[i]))
+            <span class="hljs-keyword">if</span> i &lt; len(sizes) - <span class="hljs-number">1</span>:
+                fcs.append(torch.nn.LeakyReLU(negative_slope=<span class="hljs-number">0.2</span>))
+                <span class="hljs-keyword">if</span> batchnorm: fcs.append(torch.nn.BatchNorm1d(sizes[i]))
+        self.layers = torch.nn.Sequential(*fcs)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-keyword">return</span> self.layers(x)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NetConv</span><span class="hljs-params">(torch.nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, in_nf, in_ef, out_nf, h1=<span class="hljs-number">16</span>, h2=<span class="hljs-number">16</span>)</span>:</span>
+        super().__init__()
+        self.in_nf = in_nf
+        self.in_ef = in_ef
+        self.out_nf = out_nf
+        self.h1 = h1
+        self.h2 = h2
+        self.MLP_msg_i2o = MLP(self.in_nf * <span class="hljs-number">2</span> , <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">1</span> + self.h1 + self.h2)
+        self.MLP_reduce_o = MLP(self.in_nf + self.h1 + self.h2, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, self.out_nf)
+        self.MLP_msg_o2i = MLP(self.in_nf * <span class="hljs-number">2</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, self.out_nf)
+        self.MLP_readout = MLP(self.in_nf * <span class="hljs-number">2</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>, self.out_nf)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edge_msg_i</span><span class="hljs-params">(self, edges)</span>:</span>
+        x = torch.cat([edges.src[<span class="hljs-string">&apos;nf&apos;</span>], edges.dst[<span class="hljs-string">&apos;nf&apos;</span>]], dim=<span class="hljs-number">1</span>)
+        x = self.MLP_msg_o2i(x)
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">&apos;efi&apos;</span>: x}
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edge_msg_o</span><span class="hljs-params">(self, edges)</span>:</span>
+        x = torch.cat([edges.src[<span class="hljs-string">&apos;nf&apos;</span>], edges.dst[<span class="hljs-string">&apos;nf&apos;</span>]], dim=<span class="hljs-number">1</span>)
+        x = self.MLP_msg_i2o(x)
+        k, f1, f2 = torch.split(x, [<span class="hljs-number">1</span>, self.h1, self.h2], dim=<span class="hljs-number">1</span>)
+        k = torch.sigmoid(k)
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">&apos;efo1&apos;</span>: f1 * k, <span class="hljs-string">&apos;efo2&apos;</span>: f2 * k}
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">node_reduce_o</span><span class="hljs-params">(self, nodes)</span>:</span>
+        x = torch.cat([nodes.data[<span class="hljs-string">&apos;nf&apos;</span>], nodes.data[<span class="hljs-string">&apos;nfo1&apos;</span>], nodes.data[<span class="hljs-string">&apos;nfo2&apos;</span>]], dim=<span class="hljs-number">1</span>)
+        x = self.MLP_reduce_o(x)
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">&apos;new_nf&apos;</span>: x}
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edge_readout</span><span class="hljs-params">(self, edges)</span>:</span>
+        x = torch.cat([edges.src[<span class="hljs-string">&apos;nf&apos;</span>], edges.dst[<span class="hljs-string">&apos;nf&apos;</span>]], dim=<span class="hljs-number">1</span>)
+        x = self.MLP_readout(x)
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">&apos;nef&apos;</span>: x}
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, g, nf)</span>:</span>
+        <span class="hljs-keyword">with</span> g.local_scope():
+            g.ndata[<span class="hljs-string">&apos;nf&apos;</span>] = nf
+            <span class="hljs-comment"># input nodes</span>
+            g.apply_edges(self.edge_readout, etype=<span class="hljs-string">&apos;net_out&apos;</span>)  <span class="hljs-comment"># message passing from source to sink</span>
+            g.update_all(self.edge_msg_i, fn.sum(<span class="hljs-string">&apos;efi&apos;</span>, <span class="hljs-string">&apos;new_nf&apos;</span>), etype=<span class="hljs-string">&apos;net_out&apos;</span>) <span class="hljs-comment"># read out net delay prediction</span>
+            <span class="hljs-comment"># output nodes</span>
+            g.apply_edges(self.edge_msg_o, etype=<span class="hljs-string">&apos;net_in&apos;</span>)     <span class="hljs-comment"># message passing from sink to source</span>
+            g.update_all(fn.copy_e(<span class="hljs-string">&apos;efo1&apos;</span>, <span class="hljs-string">&apos;efo1&apos;</span>), fn.sum(<span class="hljs-string">&apos;efo1&apos;</span>, <span class="hljs-string">&apos;nfo1&apos;</span>), etype=<span class="hljs-string">&apos;net_in&apos;</span>)
+            g.update_all(fn.copy_e(<span class="hljs-string">&apos;efo2&apos;</span>, <span class="hljs-string">&apos;efo2&apos;</span>), fn.max(<span class="hljs-string">&apos;efo2&apos;</span>, <span class="hljs-string">&apos;nfo2&apos;</span>), etype=<span class="hljs-string">&apos;net_in&apos;</span>)
+            g.apply_nodes(self.node_reduce_o)
+
+            <span class="hljs-keyword">return</span> g.ndata[<span class="hljs-string">&apos;new_nf&apos;</span>], g.edges[<span class="hljs-string">&apos;net_out&apos;</span>].data[<span class="hljs-string">&apos;nef&apos;</span>] 
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NetDelayPrediction</span><span class="hljs-params">(torch.nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super().__init__()
+        self.nc1 = NetConv(<span class="hljs-number">4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">16</span>)
+        self.nc2 = NetConv(<span class="hljs-number">16</span>, <span class="hljs-number">0</span>, <span class="hljs-number">16</span>)
+        self.nc3 = NetConv(<span class="hljs-number">16</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, g, groundtruth=False)</span>:</span>
+        nf0 = g.ndata[<span class="hljs-string">&apos;nf&apos;</span>]
+        x, _ = self.nc1(g, nf0)
+        x, _ = self.nc2(g, x)
+        _, net_delays = self.nc3(g, x)
+        <span class="hljs-keyword">return</span> net_delays
+</code></pre>
+<p>Finally, we can train the model with the graph we built.</p>
+<pre><code>model = NetDelayPrediction()
+model.cuda()
+
+optimizer = torch.optim.Adam(model.parameters(), lr=0.0005)
+train_loss_tot_net_delays = 0
+optimizer.zero_grad()
+
+pred_net_delays= model(g, groundtruth=args.groundtruth)
+loss_net_delays = 0
+
+loss_net_delays = F.mse_loss(pred_net_delays, g.edges[&apos;net_out&apos;].data[&apos;net_delays_log&apos;])
+train_loss_tot_net_delays += loss_net_delays.item()
+loss_net_delays.backward()
+optimizer.step()
+</code></pre><h1 id="citation">Citation</h1>
+<pre><code>[1] S. Liu, et al. &#x201C;Global Placement with Deep Learning- Enabled Explicit Routability Optimization,&#x201D; in DATE 2021. 1821&#x2013;1824.
+
+[2] Z. Xie, et al. &#x201C;RouteNet: Routability prediction for mixed-size designs using convolutional neural network,&#x201D; in ICCAD 2018. 1&#x2013;8.
+
+[3] V. A. Chhabria, et al. &#x201C;MAVIREC: ML-Aided Vectored IR-Drop Estimation and Classification,&#x201D; in DATE 2021. 1825&#x2013;1828.
+
+[4] Z. Guo, et al. &#x201C;A Timing Engine Inspired Graph Neural Network Model for Pre-Routing Slack Prediction,&#x201D; in DATE 2021. 1825&#x2013;1828.
+,&#x201D; in DAC 2022. 1207-1212.
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../intro/FAQ.html" class="navigation navigation-prev " aria-label="Previous page: FAQ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="experiment_tutorial.html#Congestion" class="navigation navigation-next " aria-label="Next page: Congestion Prediction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Tutorial","level":"1.2.4","depth":2,"next":{"title":"Congestion Prediction","level":"1.2.4.1","depth":3,"anchor":"#Congestion","path":"tutorial/experiment_tutorial.md","ref":"tutorial/experiment_tutorial.md#Congestion","articles":[]},"previous":{"title":"FAQ","level":"1.2.3","depth":2,"path":"intro/FAQ.md","ref":"intro/FAQ.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Zhuomin Chai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":0,"left":0,"top":5,"bottom":0},"frontsize":10},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CircuitNet","output.name":"circuitnet-UG-en","gitbook":"*","description":"An Open-Source Dataset for Benchmarking Machine Learning in VLSI CAD Applications","theme-default":{"showLevel":true}},"file":{"path":"tutorial/experiment_tutorial.md","mtime":"2024-11-08T08:26:20.934Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-12T05:39:28.115Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

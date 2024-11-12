@@ -1,0 +1,475 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Graph · CircuitNet</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Zhuomin Chai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="timing features.html" />
+    
+    
+    <link rel="prev" href="ir drop features.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Preface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../intro/intro.html">
+            
+                <a href="../intro/intro.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../intro/download.html">
+            
+                <a href="../intro/download.html">
+            
+                    
+                    Download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../intro/overview.html">
+            
+                <a href="../intro/overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../intro/FAQ.html">
+            
+                <a href="../intro/FAQ.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../tutorial/experiment_tutorial.html">
+            
+                <a href="../tutorial/experiment_tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../tutorial/experiment_tutorial.html">
+            
+                <a href="../tutorial/experiment_tutorial.html#Congestion">
+            
+                    
+                    Congestion Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../tutorial/experiment_tutorial.html">
+            
+                <a href="../tutorial/experiment_tutorial.html#DRC">
+            
+                    
+                    DRC Violation Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../tutorial/experiment_tutorial.html">
+            
+                <a href="../tutorial/experiment_tutorial.html#IR">
+            
+                    
+                    IR Drop Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../tutorial/experiment_tutorial.html">
+            
+                <a href="../tutorial/experiment_tutorial.html#Net_Delay">
+            
+                    
+                    Net Delay Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="properties.html">
+            
+                <a href="properties.html">
+            
+                    
+                    Features
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="routability features.html">
+            
+                <a href="routability features.html">
+            
+                    
+                    Routability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ir drop features.html">
+            
+                <a href="ir drop features.html">
+            
+                    
+                    IR drop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="graph.html">
+            
+                <a href="graph.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="timing features.html">
+            
+                <a href="timing features.html">
+            
+                    
+                    Timing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../license.html">
+            
+                <a href="../license.html">
+            
+                    
+                    License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Graph</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="graph-features">Graph Features</h1>
+<p>To enable application for graph based methods, we further provide 54 gate-level netlists and 10242 instance placement information.</p>
+<h2 id="gate-level-netlist">Gate-level Netlist</h2>
+<p>The gate-level netlists are the ones used in data generation. They are synthesised from 6 RISC-V designs with commercial 28 nm library and Synopsys Design Compiler(DC) with multiple variations. (see page <a href="https://circuitnet.github.io/feature/properties.html" target="_blank">Feature</a> for detailed information about variations) The name of standard cell and IP is encrypted due to copyright issue. </p>
+<p>There are 2 version of netlist, one is the original hierarchical version written by DC, and the other one is the flatten version written by Innovus for extracting graph.</p>
+<p><strong>For ease of use, we extract the necessary information for forming graph from the flatten netlist.</strong> They are saved in the form of numpy array in graph_information.tar.gz.</p>
+<p>(1) <strong>Pin Attributes</strong>: pin names, corresponding net index, node index.</p>
+<p>(2) <strong>Net Attributes</strong>: net name.</p>
+<p>(3) <strong>Node Attributes</strong>: node(instance) name, corresponding standard cell / IP name.</p>
+<p>The array can be loaded with</p>
+<p><code>numpy.load(FILE_NAME, allow_pickle=True)</code></p>
+<p>Here is a simple example:</p>
+<div align="center">
+  <img src="../pics/netlist.jpg" width="300">
+</div>
+
+<p>Pin Attributes: [[I,ZN,I,ZN], [0,1,1,2], [0,0,1,1]]</p>
+<p>Net Attributes: [[in, n1, out]]</p>
+<p>Node Attributes&#xFF1A;[[inv_1, inv_2],[INV,INV]]</p>
+<p>The pins with same net/node index belong to the same net/node, e.g., pin[1] &quot;ZN&quot; and pin[2] &quot;I&quot; have net index &quot;1&quot;, both of them belong to net &quot;n1&quot;; pin[0] and pin[1] have node index &quot;0&quot;, both of them belong to node &quot;inv_1&quot;. Thus, an adjacency matrix can be formulated through traversing the pin attributes array.</p>
+<h2 id="instance-placement-cell-position">Instance Placement (Cell Position)</h2>
+<p>The instance, i.e., standard cell and IP, is placed at certain location on layout after placement stage in back-end design. </p>
+<p>The placement information for each layout, i.e., the location of instances, is extracted from def and saved as a dictionary in instance_placement.tar.gz. It contains the name of instance (consistent with the ones in netlist) and the coordination for the bounding box of instance on layout. </p>
+<p>e.g., InstanceN : [left, bottom, right, top]</p>
+<p>For &quot;instance_placement_gcell&quot;, the coordinate is the same as the one in the image-like feature, which is in GCell grids, and the value indicates which GCell the instance is in.</p>
+<p>For &quot;instance_placement_micron&quot;, the coordinate is in micron, and the value indicates the . It can be converted to GCell grids through dividing the width of GCell (available in the corresponding DEF files).</p>
+<p>The dictionary can be loaded with</p>
+<p><code>numpy.load(FILE_NAME, allow_pickle=True).item()</code></p>
+<p>The placement information can be added into node attributes through indexing, since there is partially one-to-one correspondence from the node name from the node attribute array above to the keys in the instance placement dictionary (they are not exactly the same because innovus will add or delete cells, just take the intersection). With the additional placement information, tasks like congestion prediction can be completed with graph neural network.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ir drop features.html" class="navigation navigation-prev " aria-label="Previous page: IR drop">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="timing features.html" class="navigation navigation-next " aria-label="Next page: Timing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Graph","level":"1.3.3","depth":2,"next":{"title":"Timing","level":"1.3.4","depth":2,"path":"feature/timing features.md","ref":"feature/timing features.md","articles":[]},"previous":{"title":"IR drop","level":"1.3.2","depth":2,"path":"feature/ir drop features.md","ref":"feature/ir drop features.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Zhuomin Chai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":0,"left":0,"top":5,"bottom":0},"frontsize":10},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CircuitNet","output.name":"circuitnet-UG-en","gitbook":"*","description":"An Open-Source Dataset for Benchmarking Machine Learning in VLSI CAD Applications","theme-default":{"showLevel":true}},"file":{"path":"feature/graph.md","mtime":"2024-11-08T08:26:20.767Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-12T05:39:28.115Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
