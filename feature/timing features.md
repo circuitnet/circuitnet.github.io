@@ -37,7 +37,7 @@ The dictionary can be loaded with
 
 `numpy.load(FILE_NAME, allow_pickle=True)['pin_positions'].item()` 
 
-The dictionary has pin names as keys, and a list as value. The list contains 2 features, which are pin positions in micron and pin positions on gcell grid. The pin positions have 4 values, which are the left
+The dictionary has pin names as keys, and a list as value. The list contains 2 features, which are pin positions in micron and pin positions on gcell grid. The pin positions have 4 values, which are the left, bottom, right, top coordinates.
 
 ### nodes
 

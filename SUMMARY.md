@@ -4,6 +4,7 @@
 * [Introduction](intro/intro.md)
   * [Download](intro/download.md)
   * [Overview](intro/overview.md)
+  * [FAQ](intro/FAQ.md)
     <!-- * [CircuitNet-N28](intro/28.md)
     * [CircuitNet-N14](intro/14.md) -->
   * [Tutorial](tutorial/experiment_tutorial.md)

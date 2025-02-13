@@ -43,6 +43,15 @@ url={https://openreview.net/forum?id=nMFSUjxMIl}
 ```
 
 ### Change Log
+
+- 2024/11/09
+
+  Re-upload LEF/DEF, netlist and graph information to fix issue #38.
+
+  Add demo for building graph with the graph_information in the dataset here.
+
+  Add section FAQ on web page.
+  
 - 2023/7/24
 
   Code for feature extraction released. Users can use it to implement self-defined features with the LEF/DEF we released or extract features with LEF/DEF from other sources. Read the [REAME](https://github.com/circuitnet/CircuitNet/blob/main/feature_extraction/README.md) for more information.
