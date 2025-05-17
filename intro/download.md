@@ -7,6 +7,9 @@ Based on your target tasks, download Routability Features (for congestion and DR
 
 [Baidu Netdisk](https://pan.baidu.com/s/1evSTtuvphyl1_aSedsEQLA?pwd=wihf)
 
+CircuitNet-N14 is currently maintained on Hugging Face and the download link is as follows.
+
+[Hugging Face](https://huggingface.co/datasets/CircuitNet/CircuitNet/tree/main)
 
 ## Decompress and Preprocess
 - **Routability/IR Drop Features**:
