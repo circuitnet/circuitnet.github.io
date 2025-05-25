@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app-BfSmnryS.js";const c={};function n(o,r){return a(),t("div")}const s=e(c,[["render",n]]),_=JSON.parse('{"path":"/feature/changelog.html","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"feature/changelog.md"}');export{s as comp,_ as data};

@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as r}from"./app-BfSmnryS.js";const a={};function n(o,c){return r(),e("div")}const _=t(a,[["render",n]]),i=JSON.parse('{"path":"/intro/28.html","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"intro/28.md"}');export{_ as comp,i as data};
