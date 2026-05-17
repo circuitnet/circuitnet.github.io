@@ -7,7 +7,7 @@ title: "Change Log"
 ## 2026/05/17
 
 ::: info Major Updates
-- Add CircuitNet 3.0 dataset ([Paper](https://openreview.net/forum?id=lEDb4gQ4dB) [Link](https://huggingface.co/datasets/SKLP-EDA-LAB/CircuitNet3.0))!
+- Released CircuitNet 3.0 with N45 PDK!
 :::
 
 ## 2024/11/09
