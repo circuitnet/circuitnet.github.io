@@ -33,8 +33,8 @@ footer: BSD 3-Clause License | Copyright © 2022-present CircuitNet Team
 
 | Version | Description |
 | --- | --- |
-| CircuitNet 1.0 [Paper](https://ieeexplore.ieee.org/document/10158384) [Link](https://drive.google.com/drive/folders/1GjW-1LBx1563bg3pHQGvhcEyK2A9sYUB?usp=sharing) | Physical Design in 28 nm Planar CMOS. |
-| CircuitNet 2.0 [Paper](https://openreview.net/forum?id=nMFSUjxMIl) [Link](https://huggingface.co/datasets/CircuitNet/CircuitNet/tree/main) | Physical Design in 14 nm FinFET. |
+| CircuitNet 1.0 [Paper](https://ieeexplore.ieee.org/document/10158384) [Link](https://drive.google.com/drive/folders/1GjW-1LBx1563bg3pHQGvhcEyK2A9sYUB?usp=sharing) | RTL to Layout in 28 nm Planar CMOS. |
+| CircuitNet 2.0 [Paper](https://openreview.net/forum?id=nMFSUjxMIl) [Link](https://huggingface.co/datasets/CircuitNet/CircuitNet/tree/main) | RTL to Layout in 14 nm FinFET. |
 | CircuitNet 3.0 [Paper](https://openreview.net/forum?id=lEDb4gQ4dB) [Link](https://huggingface.co/datasets/SKLP-EDA-LAB/CircuitNet3.0) | RTL to Layout in 45 nm Planar CMOS. |
 
 # What is CircuitNet?
