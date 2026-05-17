@@ -1,0 +1,40 @@
+---
+title: "Introduction"
+---
+
+<div><h1 id="introduction" tabindex="-1"><a class="header-anchor" href="#introduction"><span>Introduction</span></a></h1><p>CircuitNet is an open-source dataset dedicated to machine learning (ML) applications in electronic design automation (EDA). We have collected more than 20K samples from versatile runs of commercial design tools based on open-source designs with various features for multiple ML for EDA applications.</p><h2 id="available-datasets" tabindex="-1"><a class="header-anchor" href="#available-datasets"><span>Available Datasets</span></a></h2><p>We currently maintain three variations of datasets: <strong>CircuitNet-N28</strong>, <strong>CircuitNet-N14</strong>, and <strong>CircuitNet-ISPD15</strong>. All datasets are collected from commercial design tools, but differ in underlying designs and technology nodes.</p><h3 id="circuitnet-n28" tabindex="-1"><a class="header-anchor" href="#circuitnet-n28"><span>CircuitNet-N28</span></a></h3><ul><li><strong>Design Basis</strong>: RISC-V designs</li><li><strong>Technology</strong>: 28nm planar technology</li><li><strong>Status</strong>: Most comprehensive support for all tasks</li><li><strong>Applications</strong>: Full support for all prediction tasks</li></ul><h3 id="circuitnet-n14" tabindex="-1"><a class="header-anchor" href="#circuitnet-n14"><span>CircuitNet-N14</span></a></h3><ul><li><strong>Design Basis</strong>: Multiple designs including RISC-V, GPU, and ML accelerator</li><li><strong>Technology</strong>: 14nm FinFET technology</li><li><strong>Current Support</strong>: Congestion prediction, IR drop prediction, Net delay prediction</li><li><strong>Future Plans</strong>: DRC prediction support coming soon</li></ul><h3 id="circuitnet-ispd15" tabindex="-1"><a class="header-anchor" href="#circuitnet-ispd15"><span>CircuitNet-ISPD15</span></a></h3><ul><li><strong>Design Basis</strong>: <a href="https://www.ispd.cc/contests/15/ispd2015contest.html" target="_blank" rel="noopener noreferrer">ISPD2015 contest benchmark</a></li><li><strong>Current Support</strong>: Congestion prediction</li><li><strong>Future Plans</strong>: DRC prediction support coming soon</li></ul><h2 id="feature-support-matrix" tabindex="-1"><a class="header-anchor" href="#feature-support-matrix"><span>Feature Support Matrix</span></a></h2><p>The following table shows the feature support status for each dataset:</p><table><thead><tr><th style="text-align:left;">Dataset</th><th style="text-align:center;">Congestion</th><th style="text-align:center;">DRC</th><th style="text-align:center;">IR Drop</th><th style="text-align:center;">Net Delay</th></tr></thead><tbody><tr><td style="text-align:left;">CircuitNet-N28</td><td style="text-align:center;">✅</td><td style="text-align:center;">✅</td><td style="text-align:center;">✅</td><td style="text-align:center;">✅</td></tr><tr><td style="text-align:left;">CircuitNet-N14</td><td style="text-align:center;">✅</td><td style="text-align:center;">❌</td><td style="text-align:center;">✅</td><td style="text-align:center;">✅</td></tr><tr><td style="text-align:left;">CircuitNet-ISPD15</td><td style="text-align:center;">✅</td><td style="text-align:center;">❌</td><td style="text-align:center;">N/A</td><td style="text-align:center;">N/A</td></tr></tbody></table><p>Legend: ✅ = Supported, ❌ = Not Supported, N/A = Not Applicable</p><h2 id="directory-structure" tabindex="-1"><a class="header-anchor" href="#directory-structure"><span>Directory Structure</span></a></h2><p>All datasets follow a similar directory structure to enable flexible feature combinations and custom applications.</p><h3 id="feature-organization" tabindex="-1"><a class="header-anchor" href="#feature-organization"><span>Feature Organization</span></a></h3><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">📁 .</span>
+<span class="line">├─ 📁 routability_features</span>
+<span class="line">│  ├─ 📄 cell_density</span>
+<span class="line">│  ├─ 📁 congestion</span>
+<span class="line">│  │  ├─ 📁 congestion_early_global_routing</span>
+<span class="line">│  │  │  ├─ 📁 overflow_based</span>
+<span class="line">│  │  │  │  ├─ 📄 congestion_eGR_horizontal_overflow</span>
+<span class="line">│  │  │  │  └─ 📄 congestion_eGR_vertical_overflow</span>
+<span class="line">│  │  │  └─ 📁 utilization_based</span>
+<span class="line">│  │  │     ├─ 📄 congestion_eGR_horizontal_util</span>
+<span class="line">│  │  │     └─ 📄 congestion_eGR_vertical_util</span>
+<span class="line">│  │  └─ 📁 congestion_global_routing</span>
+<span class="line">│  │     ├─ 📁 overflow_based</span>
+<span class="line">│  │     │  ├─ 📄 congestion_GR_horizontal_overflow</span>
+<span class="line">│  │     │  └─ 📄 congestion_GR_vertical_overflow</span>
+<span class="line">│  │     └─ 📁 utilization_based</span>
+<span class="line">│  │        ├─ 📄 congestion_GR_horizontal_util</span>
+<span class="line">│  │        └─ 📄 congestion_GR_vertical_util</span>
+<span class="line">│  ├─ 📁 DRC</span>
+<span class="line">│  │  ├─ 📄 DRC_all</span>
+<span class="line">│  │  └─ 📄 DRC_seperated</span>
+<span class="line">│  ├─ 📄 macro_region</span>
+<span class="line">│  └─ 📁 RUDY</span>
+<span class="line">│     ├─ 📄 RUDY</span>
+<span class="line">│     ├─ 📄 RUDY_long</span>
+<span class="line">│     ├─ 📄 RUDY_short</span>
+<span class="line">│     ├─ 📄 RUDY_pin</span>
+<span class="line">│     └─ 📄 RUDY_pin_long</span>
+<span class="line">└─ 📁 IR_drop_features</span>
+<span class="line">   ├─ 📄 power_i</span>
+<span class="line">   ├─ 📄 power_s</span>
+<span class="line">   ├─ 📄 power_sca</span>
+<span class="line">   ├─ 📄 power_all</span>
+<span class="line">   ├─ 📄 power_t</span>
+<span class="line">   └─ 📄 IR_drop</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="feature-usage" tabindex="-1"><a class="header-anchor" href="#feature-usage"><span>Feature Usage</span></a></h3><ul><li><p>Features are organized in separate directories to enable:</p><ul><li>Custom feature combinations</li><li>Flexible preprocessing methods</li><li>Task-specific feature selection</li></ul></li><li><p>Provided scripts can help you:</p><ul><li>Preprocess the raw features</li><li>Combine features for specific tasks</li><li>Prepare training and testing datasets</li></ul></li><li><p>You are encouraged to:</p><ul><li>Implement your own preprocessing methods</li><li>Experiment with different feature combinations</li><li>Develop novel feature engineering approaches</li></ul></li></ul><div class="hint-container warning"><p class="hint-container-title">Support</p><p>If you encounter any issues:</p><ul><li>Open an issue in our <a href="https://github.com/circuitnet/CircuitNet" target="_blank" rel="noopener noreferrer">GitHub repository</a></li><li>Contact us via email</li><li>Check our <a class="route-link" href="/intro/FAQ.html">FAQ page</a> for common questions</li></ul></div></div>

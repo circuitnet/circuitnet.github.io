@@ -1,0 +1,72 @@
+:root {
+  --c-brand: #b31a4f;
+  --c-brand-light: #cd2274;
+  --vp-c-accent: #b31a4f;
+  --vp-c-accent-bg: #b31a4f;
+  --vp-c-accent-hover: #cd2274;
+  --vp-c-accent-text: #ffffff;
+  --vp-c-accent-soft: rgba(179, 26, 79, 0.14);
+}
+
+.vp-home .vp-hero-image {
+  max-width: 80% !important;
+  max-height: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 3rem auto 1.5rem !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 719px) {
+  .vp-home .vp-hero-image {
+    max-width: 60% !important;
+    margin: 2rem auto 1.2rem !important;
+  }
+}
+
+.tg-wrapper {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.tg {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tg td,
+.tg th {
+  overflow: hidden;
+  padding: 8px 12px;
+  border-color: #000;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.tg th {
+  font-weight: 700;
+  background-color: #f5f5f5;
+}
+
+.tg .tg-9wq8,
+.tg .tg-baqh,
+.tg .tg-nrix,
+.tg .tg-c3ow {
+  border-color: inherit;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tg tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.tg tr:hover {
+  background-color: #f0f0f0;
+}
